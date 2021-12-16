@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+
+header {
+  background-color: #0E0661;
+  padding: 1px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 15%;
+  height: 100%;
+  padding: 30px;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 28%;
+  background-color: #E5E5E5;
+  height: 100%;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ticket_card{
+  background-color: white;
+  color: black;
+  width: 60%;
+  height: 60%;
+  /* Center horizontally*/
+  margin: 0 auto;
+}
+.ticket_card li{
+  list-style: none;
+}
+
+.ticket_card p{text-align: center;}
+
+h1{
+    font-size: large;
+    text-align: center;
+    background-color: #E5E5E5;
+}
+
+</style>
+<body>
+
+
+<!-- Sidebar -->
+<section>
+    <!-- Navbar -->
+    <header>
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-theme-l1">PMS</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Meetings</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Project</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Team</a>
+        </div>
+    </div>
+    </header>
+
+    <nav class="w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <br><br>
+        <h4 class="w3-bar-item"><b>Menu</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Tickets.html">Tickets</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Documents.html">Reference Documents</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Reports.html">Report</a>
+    </nav>
+
+    <article>
+        <div class="w3-row w3-padding-64">
+            <h1><u>Ticket Status</u></h1>
+
+            <h1><b>In Progress</b></h1>
+            
+            <div class="ticket_card w3-text-teal">
+
+                <p>
+                <b>Ticket No.</b> <br>
+                <mark>Priority</mark> <br>
+                Assigned to <br>
+                Affected User <br>
+                Issue <br>
+                </p>
+
+            </div>
+            
+        <hr>
+        <div class="ticket_card w3-text-teal">
+
+            <p>
+            <b>Ticket No.</b> <br>
+            <mark>Priority</mark> <br>
+            Assigned to <br>
+            Affected User <br>
+            Issue <br>
+            </p>
+
+            </ol>
+
+        </div>
+        <hr>
+            <div class="ticket_card w3-text-teal">
+
+            <p>
+                <b>Ticket No.</b> <br>
+                <mark>Priority</mark> <br>
+                Assigned to <br>
+                Affected User <br>
+                Issue <br>
+            </p>
+
+        </div>
+     </div>
+    </div>
+    </article>
+
+        <article>
+            <div class="w3-row w3-padding-64">
+            <h1><u>Ticket Status</u></h1>
+
+            <h1><b>Awaiting user</b></h1>
+                <div class="ticket_card w3-text-teal">
+
+                    <p>
+                    <b>Ticket No.</b> <br>
+                    Priority <br>
+                    Assigned to <br>
+                    Affected User <br>
+                    Issue <br>
+                    </p>
+
+                </div>
+                
+            <hr>
+            <div class="ticket_card w3-text-teal">
+
+                <p>
+                <b>Ticket No.</b> <br>
+                Priority <br>
+                Assigned to <br>
+                Affected User <br>
+                Issue <br>
+                </p>
+
+                </ol>
+
+            </div>
+            <hr>
+                <div class="ticket_card w3-text-teal">
+
+                <p>
+                    <b>Ticket No.</b> <br>
+                    Priority <br>
+                    Assigned to <br>
+                    Affected User <br>
+                    Issue <br>
+                </p>
+
+            </div>
+         </div>
+        </div>
+        </article>
+
+        <article>
+            <div class="w3-row w3-padding-64">
+            <h1><u>Ticket Status</u></h1>
+
+            <h1><b>Resolved</b></h1>
+            <div class="ticket_card w3-text-teal">
+
+                <p>
+                    <b>Ticket No.</b> <br>
+                    <mark>Notes</mark> <br>
+                    <i>Resolved by</i> <br>
+                    <small>Affected User</small> <br>
+                    <em>Issue</em> <br>
+                </p>
+            </div>
+
+            <hr>
+                <div class="ticket_card w3-text-teal">
+
+                    <p>
+                        <b>Ticket No.</b> <br>
+                        <mark>Notes</mark> <br>
+                        <i>Resolved by</i> <br>
+                        <small>Affected User</small> <br>
+                        <em>Issue</em> <br>
+                    </p>
+            </div>
+            <hr>
+                <div class="ticket_card w3-text-teal">
+
+                    <p>
+                        <b>Ticket No.</b> <br>
+                        <mark>Notes</mark> <br>
+                        <i>Resolved by</i> <br>
+                        <small>Affected User</small> <br>
+                        <em>Issue</em> <br>
+                    </p>
+            </div>
+        </div>
+    </div>
+        </article>
+
+</section>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
