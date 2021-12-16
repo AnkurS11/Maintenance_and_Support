@@ -10,7 +10,9 @@
 
         <style type="text/css" media="screen">
             html,body,h1,h2 {font-family: "Roboto", sans-serif;}
-
+            body{
+                background-color: #e7ebfd;
+            }
             .w3-sidebar {
             z-index: 3;
             width: 250px;
@@ -22,8 +24,8 @@
             table, th, td {
                             border: 1px solid black;
                             border-collapse: collapse;
-                            margin-left: auto;
-                            margin-right: auto;
+                            margin-left: 30%;
+                            margin-right: 10%;
                             text-align:center;
                             padding: 5px;
                             padding-left: 20px;
@@ -41,18 +43,29 @@
                     text-align: left;
                 }
             
-                nav {
-                float: left;
-                width: 15%;
-                height: 100%;
-                padding: 30px;
-                }
+    nav {
+        float: left;
+        width: 15%;
+        height: 100%;
+        padding: 30px;
+        background-color: #93A1EC;
+    }
+
+    body,html{
+        height: 100%;
+    }
+    header {
+        background-color: #0E0661;
+        padding: 1px;
+        text-align: center;
+        font-size: 25px;
+        color: white;
+    }
 
                 article {
                 float: left;
                 padding: 20px;
                 width: 85%;
-                background-color: #E5E5E5;
                 height: 100%;
                 }
 
@@ -70,9 +83,9 @@
                     height: 200px;
                     border-radius: 50%;
                     background-image: conic-gradient(
-                        gray 70deg, 
-                        lightgray 0 235deg, 
-                        black 0);
+                        #788fc7 70deg, 
+                        #2f5ed6 0 235deg, 
+                        #0c39aa 0);
                 }
         
                 .piechart {
@@ -81,17 +94,51 @@
                     align-items: center;
                     padding: 100px;
                 }
-
+                @media (min-width:992px){
+                .menu{
+                    display: block;
+                }
+                }
+                @media (min-width:768px) and (max-width:991px){
+                    .menu{
+                        display: none;
+                    }
+                    .piechart{
+                        display: none;
+                    }
+                    .chart-head{
+                        display: none;
+                    }
+                    .article{
+                        width: 100%;
+                    }
+                }
+                @media (max-width:767px){
+                    .menu{
+                        display: none;
+                    }
+                    .piechart{
+                        display: none;
+                    }
+                    .chart-head{
+                        display: none;
+                    }
+                    .article{
+                        width: 100%;
+                    }
+                    #t1{
+                        margin-left: 5%;
+                    }
+                }
         </style>
     </head>
     <body>
         <section>
             <!-- Navbar -->
             <header>
-            <div class="w3-top">
-                <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-                <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-                <a href="#" class="w3-bar-item w3-button w3-theme-l1">PMS</a>
+            <div>
+                <div class="w3-bar w3-left-align w3-large">
+                <a href="#" class="w3-bar-item w3-button w3-theme-l1">PMS- Maintenance & Support</a>
                 <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
                 <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
                 <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Meetings</a>
@@ -101,21 +148,21 @@
                 </div>
             </div>
             </header>
-        
-            <nav class="w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <div class="menu">
+            <nav class="w3-bar-block w3-collapse w3-large w3-animate-left" id="mySidebar">
                 <br><br>
                 <h4 class="w3-bar-item"><b>Menu</b></h4>
                 <a class="w3-bar-item w3-button w3-hover-black" href="Home.html">Tickets</a>
                 <a class="w3-bar-item w3-button w3-hover-black" href="Documents.html">Reference Documents</a>
                 <a class="w3-bar-item w3-button w3-hover-black" href="Reports.html">Report</a>
             </nav>
-        
-        <article>
-            <div class="w3-row w3-padding-64">
-        <div class="wrapper">
-            <h1 class="w3-text-teal"><u>Ticket Status</u></h1>
+        </div>
 
-            <select class="combo">
+        <article class="article">
+        <div class="wrapper">
+            <h2 class="w3-text-teal"><u>Team's Report</u></h2>
+
+            <select class="combo w3-text-teal">
                 <option value="Select">Select....</option>
                 <option value="html">Today</option>
                 <option value="css">Weekly</option>
@@ -124,12 +171,12 @@
             </select>
             
         </div>
-        <div><h4>Service Provided for<br> different Project</h4></div>
+        <div class="chart-head"><h4 class="w3-text-teal"><u>Service Provided for<br> different Project</u></h4></div>
 
             <div class="piechart"></div>
             
         <table id="t1">
-            <tr style="background: #C4C4C4;">
+            <tr style="background: #788fc7">
                 <th>Name</th>
                 <th>Email</th>
                 <th>From & To Dates</th>

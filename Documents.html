@@ -9,7 +9,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             html,body,h1,h2 {font-family: "Roboto", sans-serif;}
-
+            body{
+                background-color: #e7ebfd;
+            }
             .w3-sidebar {
             z-index: 3;
             width: 250px;
@@ -18,8 +20,8 @@
             height: inherit;
             }
 
-            #t1 tr:nth-child(odd) {background-color: gray;}
-            #t1 tr:nth-child(even) {background-color: lightgray;}
+            #t1 tr:nth-child(odd) {background-color: #788fc7;}
+            #t1 tr:nth-child(even) {background-color: #5276D1;}
             table, th, td {
                             border: 1px solid black;
                             border-collapse: collapse;
@@ -76,13 +78,20 @@
                 width: 15%;
                 height: 100%;
                 padding: 30px;
+                background-color: #93A1EC;
                 }
 
-                article {
+                header {
+                    background-color: #0E0661;
+                    padding: 1px;
+                    text-align: center;
+                    font-size: 25px;
+                    color: white;
+                    }
+            article {
                 float: left;
                 padding: 20px;
                 width: 85%;
-                background-color: #E5E5E5;
                 height: 100%;
                 }
 
@@ -92,16 +101,37 @@
                 display: table;
                 clear: both;
                 }
+
+                @media (min-width:992px){
+                .menu{
+                    display: block;
+                }
+                }
+                @media (min-width:768px) and (max-width:991px){
+                    .menu{
+                        display: none;
+                    }
+                    .article{
+                        width: 100%;
+                    }
+                }
+                @media (max-width:767px){
+                    .menu{
+                        display: none;
+                    }
+                    .article{
+                        width: 100%;
+                    }
+                }
         </style>
     </head>
     <body>
         <section>
             <!-- Navbar -->
             <header>
-            <div class="w3-top">
-                <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-                <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-                <a href="#" class="w3-bar-item w3-button w3-theme-l1">PMS</a>
+            <div>
+                <div class="w3-bar w3-left-align w3-large">
+                <a href="#" class="w3-bar-item w3-button w3-theme-l1">PMS- Maintenance & Support</a>
                 <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
                 <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
                 <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Meetings</a>
@@ -111,20 +141,21 @@
                 </div>
             </div>
             </header>
-        
-            <nav class="w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <div class="menu">
+            <nav class="w3-bar-block w3-collapse w3-large w3-animate-left" id="mySidebar">
                 <br><br>
                 <h4 class="w3-bar-item"><b>Menu</b></h4>
                 <a class="w3-bar-item w3-button w3-hover-black" href="Home.html">Tickets</a>
                 <a class="w3-bar-item w3-button w3-hover-black" href="Documents.html">Reference Documents</a>
                 <a class="w3-bar-item w3-button w3-hover-black" href="Reports.html">Report</a>
             </nav>
-        
-            <article>
-                <div class="w3-row w3-padding-64">
+        </div>
+            <article class="article">
 
                 <img src="service.jpg" height="200px" width="100%"></img>
-                    <h2 class="w3-text-teal">Reference Documents</h2>
+                <div class="w3-row w3-padding-64">
+
+                    <h2>Reference Documents</h2>
                     <table id="t1">
                         <tr>
                             <th>Doc_No</th>

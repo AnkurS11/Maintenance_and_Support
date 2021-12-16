@@ -10,7 +10,9 @@
 
 <style>
 html,body,h1,h2 {font-family: "Roboto", sans-serif;}
-
+body{
+    background-color: #e7ebfd;
+}
 .w3-sidebar {
   z-index: 3;
   width: 250px;
@@ -19,27 +21,27 @@ html,body,h1,h2 {font-family: "Roboto", sans-serif;}
   height: inherit;
 }
 
-header {
-  background-color: #0E0661;
-  padding: 1px;
-  text-align: center;
-  font-size: 25px;
-  color: white;
-}
-
 nav {
-  float: left;
-  width: 15%;
-  height: 100%;
-  padding: 30px;
-}
+        float: left;
+        width: 15%;
+        height: 100%;
+        padding: 30px;
+        background-color: #93A1EC;
+    }
+
+    header {
+        background-color: #0E0661;
+        padding: 1px;
+        text-align: center;
+        font-size: 25px;
+        color: white;
+    }
 
 article {
   float: left;
   padding: 20px;
   width: 28%;
   height: 100%;
-  background-color: #E5E5E5;
 }
 
 /* Clear floats after the columns */
@@ -50,16 +52,13 @@ section::after {
 }
 
 .ticket_card{
-  background-color: white;
-  color: black;
+  background-color: #5276D1;
+  color: white;
   width: 60%;
   height: 60%;
   /* Center horizontally*/
   margin: 0 auto;
   border-radius: 15px;
-}
-.ticket_card li{
-  list-style: none;
 }
 
 .ticket_card p{text-align: center;}
@@ -67,10 +66,35 @@ section::after {
 h1{
     font-size: large;
     text-align: center;
-    background-color: #E5E5E5;
+    background-color: #d1d8fd;
 }
 
-
+@media (min-width:992px){
+    .menu{
+        display: block;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .menu{
+        display: none;
+    }
+    .article{
+        width:33%
+    }
+}
+@media (max-width:767px){
+    .menu{
+        display: none;
+    }
+    .article{
+        width:33%
+    }
+    .ticket_card{
+        font-size: small;
+        height: inherit;
+        width: inherit;
+    }
+}
 </style>
 <body>
 
@@ -79,10 +103,9 @@ h1{
 <section>
     <!-- Navbar -->
     <header>
-    <div class="w3-top">
-        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-        <a href="#" class="w3-bar-item w3-button w3-theme-l1">PMS</a>
+    <div>
+        <div class="w3-bar w3-left-align w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-theme-l1">PMS- Maintenance & Support</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Meetings</a>
@@ -92,22 +115,22 @@ h1{
         </div>
     </div>
     </header>
-
-    <nav class="w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+<div class="menu">
+    <nav class="w3-bar-block w3-collapse w3-large w3-animate-left" id="mySidebar">
         <br><br>
         <h4 class="w3-bar-item"><b>Menu</b></h4>
         <a class="w3-bar-item w3-button w3-hover-black" href="Home.html">Tickets</a>
         <a class="w3-bar-item w3-button w3-hover-black" href="Documents.html">Reference Documents</a>
         <a class="w3-bar-item w3-button w3-hover-black" href="Reports.html">Report</a>
     </nav>
-<div class="image">
-    <article>
-        <div class="w3-row w3-padding-64">
+</div>
+<div>
+    <article  class="article">
             <h1 class="w3-text-teal"><u>Ticket Status</u></h1>
 
             <h1><b>In Progress</b></h1>
             
-            <div class="ticket_card w3-text-teal">
+            <div class="ticket_card">
 
                 <p>
                 <b>Ticket No.</b> <br>
@@ -120,7 +143,7 @@ h1{
             </div>
             
         <hr>
-        <div class="ticket_card w3-text-teal">
+        <div class="ticket_card">
 
             <p>
             <b>Ticket No.</b> <br>
@@ -134,7 +157,7 @@ h1{
 
         </div>
         <hr>
-            <div class="ticket_card w3-text-teal">
+            <div class="ticket_card">
 
             <p>
                 <b>Ticket No.</b> <br>
@@ -145,16 +168,13 @@ h1{
             </p>
 
         </div>
-     </div>
-    </div>
     </article>
 
-        <article>
-            <div class="w3-row w3-padding-64">
+        <article  class="article">
                 <h1 class="w3-text-teal"><u>Ticket Status</u></h1>
 
             <h1><b>Awaiting user</b></h1>
-                <div class="ticket_card w3-text-teal">
+                <div class="ticket_card">
 
                     <p>
                     <b>Ticket No.</b> <br>
@@ -167,7 +187,7 @@ h1{
                 </div>
                 
             <hr>
-            <div class="ticket_card w3-text-teal">
+            <div class="ticket_card">
 
                 <p>
                 <b>Ticket No.</b> <br>
@@ -181,7 +201,7 @@ h1{
 
             </div>
             <hr>
-                <div class="ticket_card w3-text-teal">
+                <div class="ticket_card">
 
                 <p>
                     <b>Ticket No.</b> <br>
@@ -192,16 +212,14 @@ h1{
                 </p>
 
             </div>
-         </div>
-        </div>
+
         </article>
 
-        <article>
-            <div class="w3-row w3-padding-64">
+        <article class="article">
                 <h1 class="w3-text-teal"><u>Ticket Status</u></h1>
 
             <h1><b>Resolved</b></h1>
-            <div class="ticket_card w3-text-teal">
+            <div class="ticket_card">
 
                 <p>
                     <b>Ticket No.</b> <br>
@@ -213,7 +231,7 @@ h1{
             </div>
 
             <hr>
-                <div class="ticket_card w3-text-teal">
+                <div class="ticket_card">
 
                     <p>
                         <b>Ticket No.</b> <br>
@@ -224,7 +242,7 @@ h1{
                     </p>
             </div>
             <hr>
-                <div class="ticket_card w3-text-teal">
+                <div class="ticket_card">
 
                     <p>
                         <b>Ticket No.</b> <br>
@@ -234,8 +252,7 @@ h1{
                         <em>Issue</em> <br>
                     </p>
             </div>
-        </div>
-    </div>
+
         </article>
 
 </div>
