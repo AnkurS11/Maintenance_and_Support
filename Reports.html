@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>PMS</title>
-        <meta charset="utf-8">
+<html lang="en">
+    <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <style type="text/css" media="screen">
+            html,body,h1,h2 {font-family: "Roboto", sans-serif;}
+
+            .w3-sidebar {
+            z-index: 3;
+            width: 250px;
+            top: 43px;
+            bottom: 0;
+            height: inherit;
+            }
+
             table, th, td {
                             border: 1px solid black;
                             border-collapse: collapse;
@@ -24,14 +38,83 @@
             }
 
             .wrapper {
-                        text-align: center;
-                      }
+                    text-align: left;
+                }
+            
+                nav {
+                float: left;
+                width: 15%;
+                height: 100%;
+                padding: 30px;
+                }
+
+                article {
+                float: left;
+                padding: 20px;
+                width: 85%;
+                background-color: #E5E5E5;
+                height: 100%;
+                }
+
+                /* Clear floats after the columns */
+                section::after {
+                content: "";
+                display: table;
+                clear: both;
+                }
+                .piechart {
+                    margin-top: 30px;
+                    display: block;
+                    position: absolute;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    background-image: conic-gradient(
+                        gray 70deg, 
+                        lightgray 0 235deg, 
+                        black 0);
+                }
+        
+                .piechart {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 100px;
+                }
+
         </style>
     </head>
     <body>
-        <br><br>
-        <h2>Team Report</h2>
+        <section>
+            <!-- Navbar -->
+            <header>
+            <div class="w3-top">
+                <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+                <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+                <a href="#" class="w3-bar-item w3-button w3-theme-l1">PMS</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Meetings</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Project</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Team</a>
+                </div>
+            </div>
+            </header>
+        
+            <nav class="w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+                <br><br>
+                <h4 class="w3-bar-item"><b>Menu</b></h4>
+                <a class="w3-bar-item w3-button w3-hover-black" href="Home.html">Tickets</a>
+                <a class="w3-bar-item w3-button w3-hover-black" href="Documents.html">Reference Documents</a>
+                <a class="w3-bar-item w3-button w3-hover-black" href="Reports.html">Report</a>
+            </nav>
+        
+        <article>
+            <div class="w3-row w3-padding-64">
         <div class="wrapper">
+            <h1 class="w3-text-teal"><u>Ticket Status</u></h1>
+
             <select class="combo">
                 <option value="Select">Select....</option>
                 <option value="html">Today</option>
@@ -39,8 +122,12 @@
                 <option value="css">Monthly</option>
                 <option value="css">Quaterly</option>
             </select>
+            
         </div>
-<br>
+        <div><h4>Service Provided for<br> different Project</h4></div>
+
+            <div class="piechart"></div>
+            
         <table id="t1">
             <tr style="background: #C4C4C4;">
                 <th>Name</th>
@@ -133,7 +220,21 @@
                 <td>----------</td>
             </tr>
         
-        </table>
+        </table>    
+            </article>
+    </section>
+        
+          <!-- Pagination -->
+          <div class="w3-center w3-padding-32">
+            <div class="w3-bar">
+              <a class="w3-button w3-black" href="#">1</a>
+              <a class="w3-button w3-hover-black" href="#">2</a>
+              <a class="w3-button w3-hover-black" href="#">3</a>
+              <a class="w3-button w3-hover-black" href="#">4</a>
+              <a class="w3-button w3-hover-black" href="#">5</a>
+              <a class="w3-button w3-hover-black" href="#">»</a>
+            </div>
+          </div>
         
     </body>
 </html>

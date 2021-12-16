@@ -7,8 +7,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+html,body,h1,h2 {font-family: "Roboto", sans-serif;}
 
 .w3-sidebar {
   z-index: 3;
@@ -37,8 +38,8 @@ article {
   float: left;
   padding: 20px;
   width: 28%;
-  background-color: #E5E5E5;
   height: 100%;
+  background-color: #E5E5E5;
 }
 
 /* Clear floats after the columns */
@@ -55,6 +56,7 @@ section::after {
   height: 60%;
   /* Center horizontally*/
   margin: 0 auto;
+  border-radius: 15px;
 }
 .ticket_card li{
   list-style: none;
@@ -67,6 +69,7 @@ h1{
     text-align: center;
     background-color: #E5E5E5;
 }
+
 
 </style>
 <body>
@@ -93,14 +96,14 @@ h1{
     <nav class="w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
         <br><br>
         <h4 class="w3-bar-item"><b>Menu</b></h4>
-        <a class="w3-bar-item w3-button w3-hover-black" href="Tickets.html">Tickets</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Home.html">Tickets</a>
         <a class="w3-bar-item w3-button w3-hover-black" href="Documents.html">Reference Documents</a>
         <a class="w3-bar-item w3-button w3-hover-black" href="Reports.html">Report</a>
     </nav>
-
+<div class="image">
     <article>
         <div class="w3-row w3-padding-64">
-            <h1><u>Ticket Status</u></h1>
+            <h1 class="w3-text-teal"><u>Ticket Status</u></h1>
 
             <h1><b>In Progress</b></h1>
             
@@ -148,7 +151,7 @@ h1{
 
         <article>
             <div class="w3-row w3-padding-64">
-            <h1><u>Ticket Status</u></h1>
+                <h1 class="w3-text-teal"><u>Ticket Status</u></h1>
 
             <h1><b>Awaiting user</b></h1>
                 <div class="ticket_card w3-text-teal">
@@ -195,7 +198,7 @@ h1{
 
         <article>
             <div class="w3-row w3-padding-64">
-            <h1><u>Ticket Status</u></h1>
+                <h1 class="w3-text-teal"><u>Ticket Status</u></h1>
 
             <h1><b>Resolved</b></h1>
             <div class="ticket_card w3-text-teal">
@@ -234,6 +237,8 @@ h1{
         </div>
     </div>
         </article>
+
+</div>
 
 </section>
 

@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>PMS</title>
-        <meta charset="utf-8">
+<html lang="en">
+    <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style type="text/css" media="screen">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            html,body,h1,h2 {font-family: "Roboto", sans-serif;}
+
+            .w3-sidebar {
+            z-index: 3;
+            width: 250px;
+            top: 43px;
+            bottom: 0;
+            height: inherit;
+            }
+
             #t1 tr:nth-child(odd) {background-color: gray;}
             #t1 tr:nth-child(even) {background-color: lightgray;}
             table, th, td {
@@ -19,13 +32,6 @@
                         }
             h2{
                 text-align: center;
-                }
-
-            body {
-                    background-image: url('Document.jpg');
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    background-size: cover;
                 }
 
             .button {
@@ -64,108 +70,174 @@
             .wrapper {
                         text-align: center;
                       }
+            
+            nav {
+                float: left;
+                width: 15%;
+                height: 100%;
+                padding: 30px;
+                }
+
+                article {
+                float: left;
+                padding: 20px;
+                width: 85%;
+                background-color: #E5E5E5;
+                height: 100%;
+                }
+
+                /* Clear floats after the columns */
+                section::after {
+                content: "";
+                display: table;
+                clear: both;
+                }
         </style>
     </head>
     <body>
-        <br><br>
-        <h2>Reference Documents</h2>
-        <table id="t1">
-            <tr>
-                <th>Doc_No</th>
-                <th>Title</th>
-                <th>Date of creation</th>
-                <th>Team & Project</th>
-                <th>Approved By</th>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
-            <tr>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-                <td>----------</td>
-            </tr>
+        <section>
+            <!-- Navbar -->
+            <header>
+            <div class="w3-top">
+                <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+                <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+                <a href="#" class="w3-bar-item w3-button w3-theme-l1">PMS</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Meetings</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Project</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Team</a>
+                </div>
+            </div>
+            </header>
         
-        </table>
-        <br>
-        <div class="wrapper">
-           <p> <button class="button button1">Open Document</button>    
-        <button class="button button2">Exit</button></p>
-        </div>
+            <nav class="w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+                <br><br>
+                <h4 class="w3-bar-item"><b>Menu</b></h4>
+                <a class="w3-bar-item w3-button w3-hover-black" href="Home.html">Tickets</a>
+                <a class="w3-bar-item w3-button w3-hover-black" href="Documents.html">Reference Documents</a>
+                <a class="w3-bar-item w3-button w3-hover-black" href="Reports.html">Report</a>
+            </nav>
+        
+            <article>
+                <div class="w3-row w3-padding-64">
+
+                <img src="service.jpg" height="200px" width="100%"></img>
+                    <h2 class="w3-text-teal">Reference Documents</h2>
+                    <table id="t1">
+                        <tr>
+                            <th>Doc_No</th>
+                            <th>Title</th>
+                            <th>Date of creation</th>
+                            <th>Team & Project</th>
+                            <th>Approved By</th>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                        <tr>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                        </tr>
+                    
+                    </table>
+                    
+                </div>
+                <div class="wrapper">
+                       <p> <button class="button button1">Open Document</button>    
+                    <button class="button button2">Exit</button></p>
+                </div>
+                </article>
+        </section>
+        
+          <!-- Paging -->
+          <div class="w3-center w3-padding-32">
+            <div class="w3-bar">
+              <a class="w3-button w3-black" href="#">1</a>
+              <a class="w3-button w3-hover-black" href="#">2</a>
+              <a class="w3-button w3-hover-black" href="#">3</a>
+              <a class="w3-button w3-hover-black" href="#">4</a>
+              <a class="w3-button w3-hover-black" href="#">5</a>
+              <a class="w3-button w3-hover-black" href="#">»</a>
+            </div>
+          </div>
+        
     </body>
 </html>
