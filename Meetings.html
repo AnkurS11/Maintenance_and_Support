@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PMS- Project Management System</title>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./external_css.css">
+
+    <style>
+
+        .w3-sidebar {
+        z-index: 3;
+        width: 250px;
+        top: 43px;
+        bottom: 0;
+        height: inherit;
+        }
+
+        h1{
+            font-size: x-large;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .calender{
+            width: 98%;
+        }
+        .calender img{
+            width: 100%;
+        }
+
+        @media (min-width:992px){
+            .menu{
+                display: block;
+            }
+        }
+        @media (min-width:768px) and (max-width:991px){
+            .menu{
+                display: none;
+            }
+
+        }
+        @media (max-width:767px){
+            .menu{
+                display: none;
+            }
+            
+            h1{
+                font-size: medium;
+            }
+
+            .calender img{
+                display: flexbox;
+                height: 50vh;
+            }
+        }
+
+    </style>
+
+<body style="background-color: #e7ebfd;">
+
+<!-- Sidebar -->
+<section>
+    <!-- Navbar -->
+    <header>
+    <div>
+        <div class="w3-bar w3-left-align w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-theme-l1">PMS- Maintenance & Support</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+        <a href="Meetings.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Meetings</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Project</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Team</a>
+        </div>
+    </div>
+    </header>
+<div class="menu">
+    <nav class="w3-bar-block w3-collapse w3-large w3-animate-left" id="mySidebar">
+        <br><br>
+        <h4 class="w3-bar-item"><b>Menu</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Home.html">Tickets</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Documents.html">Reference Documents</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Reports.html">Report</a>
+    </nav>
+</div>
+<div>
+    <article  class="article">
+        <div class="cal_image">
+            <h1 class="w3-text-teal">Calendar</h1>
+            <div class="calender">
+                <img src="./calender1.jpg" alt="calendar">
+            </div>
+        </div>
+
+    </article>
+
+</div>
+
+</section>
+
+</div>
+
+</body>
+</html>
