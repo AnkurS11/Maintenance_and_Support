@@ -1,101 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>PMS- Project Management System</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>PMS- Project Management System</title>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./external_css.css">
 
-<style>
-html,body,h1,h2 {font-family: "Roboto", sans-serif;}
+    <style>
 
-.w3-sidebar {
-  z-index: 3;
-  width: 250px;
-  top: 43px;
-  bottom: 0;
-  height: inherit;
-}
+        .w3-sidebar {
+        z-index: 3;
+        width: 250px;
+        top: 43px;
+        bottom: 0;
+        height: inherit;
+        }
 
-nav {
-        float: left;
-        width: 15%;
-        height: 150vh;
-        padding: 30px;
-        background-color: #93A1EC;
-    }
+        article {
+        width: 28%;
+        }
 
-    header {
-        background-color: #0E0661;
-        padding: 1px;
-        text-align: center;
-        font-size: 25px;
+        /* Clear floats after the columns */
+        section::after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        .ticket_card{
+        background-color: #5276D1;
         color: white;
-    }
+        width: 60%;
+        height: 60%;
+        /* Center horizontally*/
+        margin: 0 auto;
+        border-radius: 15px;
+        }
 
-article {
-  float: left;
-  padding: 20px;
-  width: 28%;
-  height: 100%;
-}
+        .ticket_card p{text-align: center;}
 
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+        h1{
+            font-size: large;
+            text-align: center;
+        }
 
-.ticket_card{
-  background-color: #5276D1;
-  color: white;
-  width: 60%;
-  height: 60%;
-  /* Center horizontally*/
-  margin: 0 auto;
-  border-radius: 15px;
-}
-
-.ticket_card p{text-align: center;}
-
-h1{
-    font-size: large;
-    text-align: center;
-}
-
-@media (min-width:992px){
-    .menu{
-        display: block;
-    }
-}
-@media (min-width:768px) and (max-width:991px){
-    .menu{
-        display: none;
-    }
-    .article{
-        width:33%
-    }
-}
-@media (max-width:767px){
-    .menu{
-        display: none;
-    }
-    .article{
-        width:33%
-    }
-    .ticket_card{
-        font-size: x-small;
-        height: 50%;
-        width: 50%;
-    }
-    h1{
-        font-size: medium;
-    }
-}
-</style>
+        @media (min-width:992px){
+            .menu{
+                display: block;
+            }
+        }
+        @media (min-width:768px) and (max-width:991px){
+            .menu{
+                display: none;
+            }
+            .article{
+                width:33%
+            }
+        }
+        @media (max-width:767px){
+            .menu{
+                display: none;
+            }
+            .article{
+                width:33%
+            }
+            .ticket_card{
+                font-size: x-small;
+                height: 50%;
+                width: 50%;
+            }
+            h1{
+                font-size: medium;
+            }
+        }
+    </style>
 
 <body style="background-color: #e7ebfd;">
 
