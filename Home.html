@@ -35,10 +35,24 @@
         box-shadow: 1px 1px 2px  #333333;
         }
 
+        @keyframes card{
+            0%{
+                transform: translateY(5%);
+                width: 65%;
+            }
+            100%{
+                width: 65%;
+            }
+        }
+
         .ticket_card p{text-align: center;}
 
         .ticket_card:hover{
         background-color: #556791;
+        position: relative;
+        animation-name: card;
+        animation-duration: 2s;  
+        animation-fill-mode: forwards;
         }
 
         h1{
@@ -76,7 +90,6 @@
             }
         }
 
-
     </style>
 
 <body style="background-color: #e7ebfd;">
@@ -88,8 +101,8 @@
     <div>
         <div class="w3-bar w3-left-align w3-large">
         <a href="#" class="w3-bar-item w3-button w3-theme-l1">PMS- Maintenance & Support</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+        <a href="Home.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+        <a href="About.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
         <a href="Meetings.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Meetings</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Project</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Team</a>
@@ -105,6 +118,7 @@
         <a class="w3-bar-item w3-button w3-hover-black" href="Reports.html">Report</a>
     </nav>
 </div>
+
 <div>
     <article  class="article">
             <h1 class="w3-text-teal"><u>Ticket Status</u></h1>
