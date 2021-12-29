@@ -6,7 +6,8 @@ nav {
     height: 150vh;
     padding: 30px;
     background-color: #93A1EC;
-    }
+    opacity: 0.8;
+}
 
 header {
     background-color: #0E0661;
@@ -27,3 +28,7 @@ section::after {
     display: table;
     clear: both;
     }
+
+a:hover{
+    text-decoration: underline;
+}
