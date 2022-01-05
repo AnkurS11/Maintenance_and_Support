@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pms:schema xmlns:pms="http://www.w3.org/2001/XMLSchema">
+   <pms:element name="PMS" type="Support" />
+   <pms:complexType name="Support">
+      <pms:sequence>
+         <pms:element name="Tickets" type="Ticket1" minOccurs="1" maxOccurs="unbounded" />
+      </pms:sequence>
+   </pms:complexType>
+   <pms:complexType name="Ticket1">
+      <pms:sequence>
+         <pms:element name="Priority" type="set_value" />
+         <pms:element name="Assigned_to" type="pms:string" />
+         <pms:element name="Date" type="pms:date" />
+         <pms:element name="Time" type="pms:time" />
+         <pms:element name="Status" type="set_status" />
+         <pms:element name="Team_level" type="set_value" />
+         <pms:element name="Affeted_users" type="pms:integer" />
+      </pms:sequence>
+      <pms:attribute name="Ticket_no" type="pms:ID" use="required" />
+   </pms:complexType>
+   <pms:simpleType name="set_value">
+      <pms:restriction base="pms:integer">
+         <pms:minInclusive value="0" />
+         <pms:maxInclusive value="4" />
+      </pms:restriction>
+   </pms:simpleType>
+   <pms:simpleType name="set_status">
+      <pms:restriction base="pms:string">
+         <pms:enumeration value="In Progress" />
+         <pms:enumeration value="On Hold" />
+         <pms:enumeration value="Resolved" />
+         <pms:enumeration value="Cancled" />
+      </pms:restriction>
+   </pms:simpleType>
+</pms:schema>
