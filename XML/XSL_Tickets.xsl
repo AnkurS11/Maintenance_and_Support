@@ -59,7 +59,31 @@
                   </xsl:if>
                </xsl:for-each>
             </table>
+                           
+               <xsl:apply-templates/>  
+               
+            
          </body>
       </html>
    </xsl:template>
+   
+    <xsl:template match="Tickets">
+	  <p>
+	  <xsl:apply-templates select="Assigned_to"/>
+	  <xsl:apply-templates select="Team_level"/>
+	  </p>
+	</xsl:template>
+	
+	<xsl:template match="Assigned_to"><div align="center">
+	  Ticket is Assigned_to: <span style="color:#ff0000">
+	  <xsl:value-of select="."/></span>
+	  <br /></div>
+	</xsl:template>
+	
+	<xsl:template match="Team_level"><div align="center">
+	  Team_level: <span style="color:#00ff00">
+	  <xsl:value-of select="."/></span>
+	  <br/></div>
+	</xsl:template>
+
 </xsl:stylesheet>
