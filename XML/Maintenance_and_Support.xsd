@@ -14,7 +14,7 @@
          <pms:element name="Time" type="pms:time" />
          <pms:element name="Status" type="set_status" />
          <pms:element name="Team_level" type="set_value" />
-         <pms:element name="Affeted_users" type="pms:integer" />
+         <pms:element name="Affected_users" type="pms:integer" />
       </pms:sequence>
       <pms:attribute name="Ticket_no" type="pms:ID" use="required" />
    </pms:complexType>

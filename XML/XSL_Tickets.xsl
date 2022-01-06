@@ -4,9 +4,9 @@
       <html>
          <head />
          <body>
-            <h1 style="text-align:center">Maintenance_and_Support</h1>
-            <table border="2" align="center">
-               <tr>
+            <h1 style="text-align:center"><u>Maintenance_and_Support</u></h1>
+            <table border="2" align="center" bgcolor = "lightyellow">
+               <tr bgcolor= "lightblue">
                   <th>Priority</th>
                   <th>Assigned_to</th>
                   <th>Date</th>
@@ -34,11 +34,26 @@
                         <td>
                            <xsl:value-of select="Status" />
                         </td>
+                           <xsl:choose>
+						        <xsl:when test="Team_level = 1">
+						          <td bgcolor="#ffff66">
+						          <xsl:value-of select="Team_level" /></td>
+						        </xsl:when>
+						        <xsl:when test="Team_level = 2">
+						          <td bgcolor="#e6e600">
+						          <xsl:value-of select="Team_level" /></td>
+						        </xsl:when>
+						        <xsl:when test="Team_level = 3">
+						          <td bgcolor="#ffffb3">
+						          <xsl:value-of select="Team_level" /></td>
+						        </xsl:when>
+						        <xsl:otherwise>
+						          <td bgcolor="#999900">
+						          <xsl:value-of select="Team_level" /></td>
+						        </xsl:otherwise>
+						    </xsl:choose>
                         <td>
-                           <xsl:value-of select="Team_level" />
-                        </td>
-                        <td>
-                           <xsl:value-of select="Affeted_users" />
+                           <xsl:value-of select="Affected_users" />
                         </td>
                      </tr>
                   </xsl:if>

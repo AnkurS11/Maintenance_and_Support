@@ -9,7 +9,7 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
       <Time>09:00:00</Time>
       <Status>In Progress</Status>
       <Team_level>1</Team_level>
-      <Affeted_users>2</Affeted_users>
+      <Affected_users>2</Affected_users>
    </Tickets>
    <Tickets Ticket_no="PMS02">
       <Priority>3</Priority>
@@ -18,7 +18,7 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
       <Time>06:29:45</Time>
       <Status>In Progress</Status>
       <Team_level>1</Team_level>
-      <Affeted_users>5</Affeted_users>
+      <Affected_users>5</Affected_users>
    </Tickets>
    <Tickets Ticket_no="PMS03">
       <Priority>4</Priority>
@@ -27,16 +27,16 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
       <Time>16:54:20</Time>
       <Status>On Hold</Status>
       <Team_level>3</Team_level>
-      <Affeted_users>1</Affeted_users>
+      <Affected_users>1</Affected_users>
    </Tickets>
    <Tickets Ticket_no="PMS04">
-      <Priority>2</Priority>
+      <Priority>3</Priority>
       <Assigned_to>Priyanka</Assigned_to>
-      <Date>2022-01-05</Date>
+      <Date>2021-11-05</Date>
       <Time>09:00:00</Time>
       <Status>Resolved</Status>
       <Team_level>2</Team_level>
-      <Affeted_users>10</Affeted_users>
+      <Affected_users>10</Affected_users>
    </Tickets>
    <Tickets Ticket_no="PMS05">
       <Priority>4</Priority>
@@ -45,7 +45,7 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
       <Time>11:38:12</Time>
       <Status>In Progress</Status>
       <Team_level>1</Team_level>
-      <Affeted_users>1</Affeted_users>
+      <Affected_users>1</Affected_users>
    </Tickets>
    <Tickets Ticket_no="PMS06">
       <Priority>3</Priority>
@@ -54,7 +54,7 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
       <Time>01:34:56</Time>
       <Status>Cancled</Status>
       <Team_level>3</Team_level>
-      <Affeted_users>4</Affeted_users>
+      <Affected_users>4</Affected_users>
    </Tickets>
    <Tickets Ticket_no="PMS07">
       <Priority>4</Priority>
@@ -63,7 +63,7 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
       <Time>10:04:30</Time>
       <Status>On Hold</Status>
       <Team_level>4</Team_level>
-      <Affeted_users>1</Affeted_users>
+      <Affected_users>1</Affected_users>
    </Tickets>
    <Tickets Ticket_no="PMS08">
       <Priority>1</Priority>
@@ -72,7 +72,7 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
       <Time>07:50:34</Time>
       <Status>In Progress</Status>
       <Team_level>1</Team_level>
-      <Affeted_users>20</Affeted_users>
+      <Affected_users>20</Affected_users>
    </Tickets>
    <Tickets Ticket_no="PMS09">
       <Priority>4</Priority>
@@ -81,7 +81,7 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
       <Time>16:50:28</Time>
       <Status>Resolved</Status>
       <Team_level>3</Team_level>
-      <Affeted_users>1</Affeted_users>
+      <Affected_users>1</Affected_users>
    </Tickets>
    <Tickets Ticket_no="PMS10">
       <Priority>2</Priority>
@@ -90,6 +90,6 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
       <Time>02:36:51</Time>
       <Status>On Hold</Status>
       <Team_level>4</Team_level>
-      <Affeted_users>12</Affeted_users>
+      <Affected_users>12</Affected_users>
    </Tickets>
 </PMS>
