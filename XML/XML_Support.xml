@@ -150,12 +150,61 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
       <Team_level>1</Team_level>
    </Technical_Team>
    
-   <Projects Project_ID="idvalue2">
-    <Name>Name</Name>
-    <Client>Client</Client>
+   <Projects Project_ID="Prj1">
+    <Name>Support</Name>
+    <Client>Wipro</Client>
     <Start_Date>2001-01-02</Start_Date>
-    <End_Date>2001-02-01</End_Date>
-    <Teams>0</Teams>
+    <End_Date>2008-02-01</End_Date>
+    <Teams>2</Teams>
+  </Projects>
+  <Projects Project_ID="Prj2">
+    <Name>Development</Name>
+    <Client>Infosys</Client>
+    <Start_Date>2001-01-23</Start_Date>
+    <End_Date>2010-02-23</End_Date>
+    <Teams>4</Teams>
+  </Projects>
+  <Projects Project_ID="Prj3">
+    <Name>E-cart</Name>
+    <Client>Flipcart</Client>
+    <Start_Date>2013-01-02</Start_Date>
+    <End_Date>2019-02-01</End_Date>
+    <Teams>3</Teams>
+  </Projects>
+  <Projects Project_ID="Prj4">
+    <Name>Salary Management</Name>
+    <Client>TCS</Client>
+    <Start_Date>2001-01-02</Start_Date>
+    <End_Date>2009-02-01</End_Date>
+    <Teams>2</Teams>
+  </Projects>
+  <Projects Project_ID="Prj5">
+    <Name>Online-Exam</Name>
+    <Client>Deloid</Client>
+    <Start_Date>2010-03-02</Start_Date>
+    <End_Date>2022-04-01</End_Date>
+    <Teams>1</Teams>
+  </Projects>
+  <Projects Project_ID="Prj6">
+    <Name>Delivery system</Name>
+    <Client>Mac-D</Client>
+    <Start_Date>2001-01-02</Start_Date>
+    <End_Date>2022-02-01</End_Date>
+    <Teams>5</Teams>
+  </Projects>
+  <Projects Project_ID="Prj7">
+    <Name>College management</Name>
+    <Client>Christ</Client>
+    <Start_Date>2019-01-02</Start_Date>
+    <End_Date>2025-02-01</End_Date>
+    <Teams>8</Teams>
+  </Projects>
+  <Projects Project_ID="Prj8">
+    <Name>Mall Management</Name>
+    <Client>Forum</Client>
+    <Start_Date>2005-01-02</Start_Date>
+    <End_Date>2010-02-01</End_Date>
+    <Teams>3</Teams>
   </Projects>
   
   <Affected_user User_ID="idvalue3">
