@@ -232,7 +232,7 @@
                   <th>Title</th>
                   <th>Date</th>
                   <th>Author</th>
-                  <th>P</th>
+                  <th>Pages</th>
                </tr>
                <xsl:for-each select="PMS/Documents">
                   <xsl:sort select="Title" />
