@@ -207,12 +207,61 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
     <Teams>3</Teams>
   </Projects>
   
-  <Affected_user User_ID="idvalue3">
-    <Name>Name</Name>
-    <Address>Address</Address>
-    <Project>Project</Project>
-    <Issue>Issue</Issue>
-    <Ticket_no>1</Ticket_no>
+  <Affected_user User_ID="user01">
+    <Name>Ankur</Name>
+    <Address>Bhopal</Address>
+    <Project>Offsite</Project>
+    <Issue>Unable to Login</Issue>
+    <Ticket_no>PMS01</Ticket_no>
+  </Affected_user>
+  <Affected_user User_ID="user02">
+    <Name>Adarsh</Name>
+    <Address>Bangalore</Address>
+    <Project>Onsite</Project>
+    <Issue>Page not loading</Issue>
+    <Ticket_no>PMS02</Ticket_no>
+  </Affected_user>
+  <Affected_user User_ID="user03">
+    <Name>Divya</Name>
+    <Address>Delhi</Address>
+    <Project>Offsite</Project>
+    <Issue>Login</Issue>
+    <Ticket_no>PMS03</Ticket_no>
+  </Affected_user>
+  <Affected_user User_ID="user04">
+    <Name>Rohit</Name>
+    <Address>Jammu</Address>
+    <Project>Onsite</Project>
+    <Issue>Software</Issue>
+    <Ticket_no>PMS03</Ticket_no>
+  </Affected_user>
+  <Affected_user User_ID="user05">
+    <Name>Ifran</Name>
+    <Address>Mysore</Address>
+    <Project>Offsite</Project>
+    <Issue>Tech. issue</Issue>
+    <Ticket_no>PMS01</Ticket_no>
+  </Affected_user>
+  <Affected_user User_ID="user06">
+    <Name>Ayushree</Name>
+    <Address>Ranchi</Address>
+    <Project>Onsite</Project>
+    <Issue>Hardware</Issue>
+    <Ticket_no>PMS06</Ticket_no>
+  </Affected_user>
+  <Affected_user User_ID="user07">
+    <Name>Priyanka</Name>
+    <Address>Bengal</Address>
+    <Project>Offsite</Project>
+    <Issue>Email issue</Issue>
+    <Ticket_no>PMS05</Ticket_no>
+  </Affected_user>
+  <Affected_user User_ID="user08">
+    <Name>Pradeep</Name>
+    <Address>Mysore</Address>
+    <Project>Offsite</Project>
+    <Issue>Credentials</Issue>
+    <Ticket_no>PMS08</Ticket_no>
   </Affected_user>
   
   <Team_Report>
