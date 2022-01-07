@@ -274,13 +274,13 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
     <Hours>30</Hours>
   </Team_Report>
   <Team_Report>
-    <Team_ID>TM01</Team_ID>
-    <Name>Ankur</Name>
+    <Team_ID>TM08</Team_ID>
+    <Name>Jeetank</Name>
     <From_Date>2021-02-01</From_Date>
     <To_Date>2021-03-01</To_Date>
-    <Resolutions>18</Resolutions>
-    <Email>Ankur@gmail.com</Email>
-    <Hours>30</Hours>
+    <Resolutions>16</Resolutions>
+    <Email>Jeetank@gmail.com</Email>
+    <Hours>32</Hours>
   </Team_Report>
   <Team_Report>
     <Team_ID>TM02</Team_ID>
@@ -337,13 +337,63 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
     <Hours>127</Hours>
   </Team_Report>
   
-  <Manager Emp_ID="idvalue4">
-    <F_Name>F_name</F_Name>
-    <L_Name>L_name</L_Name>
-    <Address>Address</Address>
+  <Manager Emp_ID="emp01">
+    <F_Name>Ankur</F_Name>
+    <L_Name>Sharma</L_Name>
+    <Address>Bhopal</Address>
     <Experience>5</Experience>
-    <Project_ID>Project_ID</Project_ID>
+    <Project_ID>prj1</Project_ID>
   </Manager>
+  <Manager Emp_ID="emp02">
+    <F_Name>Adarsh</F_Name>
+    <L_Name>Verma</L_Name>
+    <Address>Mysore</Address>
+    <Experience>1</Experience>
+    <Project_ID>prj1</Project_ID>
+  </Manager>
+  <Manager Emp_ID="emp03">
+    <F_Name>Priyanka</F_Name>
+    <L_Name>Yadav</L_Name>
+    <Address>Bengal</Address>
+    <Experience>3</Experience>
+    <Project_ID>prj3</Project_ID>
+  </Manager>
+  <Manager Emp_ID="emp04">
+    <F_Name>Pradeep</F_Name>
+    <L_Name>Gupta</L_Name>
+    <Address>UP</Address>
+    <Experience>3</Experience>
+    <Project_ID>prj3</Project_ID>
+  </Manager>
+  <Manager Emp_ID="emp05">
+    <F_Name>Ayushree</F_Name>
+    <L_Name>Chackra</L_Name>
+    <Address>Ranchi</Address>
+    <Experience>7</Experience>
+    <Project_ID>prj5</Project_ID>
+  </Manager>
+  <Manager Emp_ID="emp06">
+    <F_Name>Jeetank</F_Name>
+    <L_Name>Naidu</L_Name>
+    <Address>Mumbai</Address>
+    <Experience>5</Experience>
+    <Project_ID>prj7</Project_ID>
+  </Manager>
+  <Manager Emp_ID="emp07">
+    <F_Name>Rachit</F_Name>
+    <L_Name>Patel</L_Name>
+    <Address>Gujrat</Address>
+    <Experience>4</Experience>
+    <Project_ID>prj7</Project_ID>
+  </Manager>
+  <Manager Emp_ID="emp08">
+    <F_Name>Amber</F_Name>
+    <L_Name>Linda</L_Name>
+    <Address>Delhi</Address>
+    <Experience>6</Experience>
+    <Project_ID>prj8</Project_ID>
+  </Manager>
+  
   
   <Documents Doc_no="idvalue5">
     <Team_ID>Team_ID</Team_ID>
