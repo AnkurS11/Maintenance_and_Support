@@ -4,6 +4,12 @@
    <pms:complexType name="Support">
       <pms:sequence>
          <pms:element name="Tickets" type="Ticket1" minOccurs="1" maxOccurs="unbounded" />
+         <pms:element name="Technical_Team" type="Team1" minOccurs="1" maxOccurs="unbounded" />
+         <pms:element name="Projects" type="Project1" minOccurs="1" maxOccurs="unbounded" />
+         <pms:element name="Affected_user" type="User1" minOccurs="1" maxOccurs="unbounded" />
+         <pms:element name="Team_Report" type="Report1" minOccurs="1" maxOccurs="unbounded" />
+         <pms:element name="Manager" type="Manager1" minOccurs="1" maxOccurs="unbounded" />
+         <pms:element name="Documents" type="Doc1" minOccurs="1" maxOccurs="unbounded" />
       </pms:sequence>
    </pms:complexType>
    <pms:complexType name="Ticket1">
@@ -17,6 +23,67 @@
          <pms:element name="Affected_users" type="pms:integer" />
       </pms:sequence>
       <pms:attribute name="Ticket_no" type="pms:ID" use="required" />
+   </pms:complexType>
+   <pms:complexType name="Team1">
+      <pms:sequence>
+         <pms:element name="Name" type="pms:string" />
+         <pms:element name="Email" type="pms:string" />
+         <pms:element name="Technology" type="pms:string" />
+         <pms:element name="Location" type="set_loc" />
+         <pms:element name="Team_level" type="set_value" />
+      </pms:sequence>
+      <pms:attribute name="Team_ID" type="pms:ID" use="required" />
+   </pms:complexType>
+   <pms:complexType name="Project1">
+      <pms:sequence>
+         <pms:element name="Name" type="pms:string" />
+         <pms:element name="Client" type="pms:string" />
+         <pms:element name="Start_Date" type="pms:date" />
+         <pms:element name="End_Date" type="pms:date" />
+         <pms:element name="Teams" type="pms:integer" />
+      </pms:sequence>
+      <pms:attribute name="Project_ID" type="pms:ID" use="required" />
+   </pms:complexType>
+   <pms:complexType name="User1">
+      <pms:sequence>
+         <pms:element name="Name" type="pms:string" />
+         <pms:element name="Address" type="pms:string" />
+         <pms:element name="Project" type="pms:string" />
+         <pms:element name="Issue" type="pms:string" />
+         <pms:element name="Ticket_no" type="pms:integer" />
+      </pms:sequence>
+      <pms:attribute name="User_ID" type="pms:ID" use="required" />
+   </pms:complexType>
+   <pms:complexType name="Report1">
+      <pms:sequence>
+         <pms:element name="Team_ID" type="pms:string" />
+         <pms:element name="Name" type="pms:string" />
+         <pms:element name="From_Date" type="pms:date" />
+         <pms:element name="To_Date" type="pms:date" />
+         <pms:element name="Resolutions" type="pms:integer" />
+         <pms:element name="Email" type="pms:string" />
+         <pms:element name="Hours" type="pms:integer" />
+      </pms:sequence>
+   </pms:complexType>
+   <pms:complexType name="Manager1">
+      <pms:sequence>
+         <pms:element name="F_Name" type="pms:string" />
+         <pms:element name="L_Name" type="pms:string" />
+         <pms:element name="Address" type="pms:string" />
+         <pms:element name="Experience" type="pms:integer" />
+         <pms:element name="Project_ID" type="pms:string" />
+      </pms:sequence>
+      <pms:attribute name="Emp_ID" type="pms:ID" use="required" />
+   </pms:complexType>
+   <pms:complexType name="Doc1">
+      <pms:sequence>
+         <pms:element name="Team_ID" type="pms:string" />
+         <pms:element name="Title" type="pms:string" />
+         <pms:element name="Date" type="pms:date" />
+         <pms:element name="Author" type="pms:string" />
+         <pms:element name="Pages" type="pms:integer" />
+      </pms:sequence>
+      <pms:attribute name="Doc_no" type="pms:ID" use="required" />
    </pms:complexType>
    <pms:simpleType name="set_value">
       <pms:restriction base="pms:integer">
@@ -32,4 +99,11 @@
          <pms:enumeration value="Cancled" />
       </pms:restriction>
    </pms:simpleType>
+   <pms:simpleType name="set_loc">
+      <pms:restriction base="pms:string">
+         <pms:enumeration value="Offsite" />
+         <pms:enumeration value="Onsite" />
+      </pms:restriction>
+   </pms:simpleType>
+   
 </pms:schema>

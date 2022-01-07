@@ -92,4 +92,103 @@ xsi:noNamespaceSchemaLocation="Maintenance_and_Support.xsd">
       <Team_level>4</Team_level>
       <Affected_users>12</Affected_users>
    </Tickets>
+   
+   <Technical_Team Team_ID="TM01">
+      <Name>BPO</Name>
+      <Email>BPO@gmail.com</Email>
+      <Technology>On-call</Technology>
+      <Location>Onsite</Location>
+      <Team_level>1</Team_level>
+   </Technical_Team>
+   <Technical_Team Team_ID="TM02">
+      <Name>Development</Name>
+      <Email>Development@gmail.com</Email>
+      <Technology>Software</Technology>
+      <Location>Onsite</Location>
+      <Team_level>4</Team_level>
+   </Technical_Team>
+   <Technical_Team Team_ID="TM03">
+      <Name>Support</Name>
+      <Email>support@gmail.com</Email>
+      <Technology>Login</Technology>
+      <Location>Offsite</Location>
+      <Team_level>1</Team_level>
+   </Technical_Team>
+   <Technical_Team Team_ID="TM04">
+      <Name>Onsite</Name>
+      <Email>Onsite@gmail.com</Email>
+      <Technology>Hardware</Technology>
+      <Location>Onsite</Location>
+      <Team_level>2</Team_level>
+   </Technical_Team>
+   <Technical_Team Team_ID="TM05">
+      <Name>Tech</Name>
+      <Email>Tech@gmail.com</Email>
+      <Technology>Software</Technology>
+      <Location>Onsite</Location>
+      <Team_level>3</Team_level>
+   </Technical_Team>
+   <Technical_Team Team_ID="TM06">
+      <Name>System</Name>
+      <Email>system@gmail.com</Email>
+      <Technology>UI</Technology>
+      <Location>Offsite</Location>
+      <Team_level>2</Team_level>
+   </Technical_Team>
+   <Technical_Team Team_ID="TM07">
+      <Name>Email</Name>
+      <Email>email@gmail.com</Email>
+      <Technology>Communications</Technology>
+      <Location>Offsite</Location>
+      <Team_level>2</Team_level>
+   </Technical_Team>
+   <Technical_Team Team_ID="TM08">
+      <Name>Admin</Name>
+      <Email>Admin@gmail.com</Email>
+      <Technology>Credentials</Technology>
+      <Location>Onsite</Location>
+      <Team_level>1</Team_level>
+   </Technical_Team>
+   
+   <Projects Project_ID="idvalue2">
+    <Name>Name</Name>
+    <Client>Client</Client>
+    <Start_Date>2001-01-02</Start_Date>
+    <End_Date>2001-02-01</End_Date>
+    <Teams>0</Teams>
+  </Projects>
+  
+  <Affected_user User_ID="idvalue3">
+    <Name>Name</Name>
+    <Address>Address</Address>
+    <Project>Project</Project>
+    <Issue>Issue</Issue>
+    <Ticket_no>1</Ticket_no>
+  </Affected_user>
+  
+  <Team_Report>
+    <Team_ID>Team_ID</Team_ID>
+    <Name>Name</Name>
+    <From_Date>2001-02-01</From_Date>
+    <To_Date>2002-01-01</To_Date>
+    <Resolutions>0</Resolutions>
+    <Email>Email</Email>
+    <Hours>3</Hours>
+  </Team_Report>
+  
+  <Manager Emp_ID="idvalue4">
+    <F_Name>F_name</F_Name>
+    <L_Name>L_name</L_Name>
+    <Address>Address</Address>
+    <Experience>5</Experience>
+    <Project_ID>Project_ID</Project_ID>
+  </Manager>
+  
+  <Documents Doc_no="idvalue5">
+    <Team_ID>Team_ID</Team_ID>
+    <Title>Title</Title>
+    <Date>2021-01-01</Date>
+    <Author>Author</Author>
+    <Pages>9</Pages>
+  </Documents>
 </PMS>
