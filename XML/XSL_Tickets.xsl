@@ -256,11 +256,14 @@
                      </tr>
                </xsl:for-each>
             </table>            
-               
-            <xsl:apply-templates select="PMS/Tickets"/>  
+            <div align="center">
+		  		<h2><u>The Ticket Info.</u></h2>
+	            <xsl:apply-templates select="PMS/Tickets"/>  
+            </div>
             
          </body>
       </html>
+      
    </xsl:template>
    
     <xsl:template match="Tickets">
@@ -273,7 +276,7 @@
 	<xsl:template match="Assigned_to"><div align="center">
 	  Ticket is Assigned_to: <span style="color:#ff0000">
 	  <xsl:value-of select="."/></span>
-	  </div><br />
+	  </div>
 	</xsl:template>
 	
 	<xsl:template match="Status"><div align="center">
