@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ems:schema xmlns:ems="http://www.w3.org/2001/XMLSchema">
+   <ems:element name="Company" type="Employees" />
+   <ems:complexType name="Employees">
+      <ems:sequence>
+         <ems:element name="Employee" type="Emp" minOccurs="1" maxOccurs="unbounded" />
+      </ems:sequence>
+   </ems:complexType>
+   <ems:complexType name="Emp">
+      <ems:sequence>
+         <ems:element name="Emp-name" type="ems:string" />
+         <ems:element name="Emp-age" type="check_age" />
+         <ems:element name="Emp-salary" type="check_salary" />
+         <ems:element name="Emp-emailid" type="check_email" />
+         <ems:element name="Emp-Phonenum" type="ems:integer" />
+         <ems:element name="Emp-designation" type="ems:string" />
+      </ems:sequence>
+      <ems:attribute name="Emp_ID" type="ems:ID" use="required" />
+   </ems:complexType>
+   <ems:simpleType name="check_salary">
+      <ems:restriction base="ems:decimal">
+         <ems:minInclusive value="50000" />
+         <ems:maxInclusive value="200000" />
+      </ems:restriction>
+   </ems:simpleType>
+   <ems:simpleType name="check_age">
+      <ems:restriction base="ems:positiveInteger">
+         <ems:maxInclusive value="100" />
+      </ems:restriction>
+   </ems:simpleType>
+   
+   <ems:simpleType name="check_email"> 
+    <ems:restriction base="ems:string"> 
+      <ems:pattern value="[^@]+@[^\.]+\..+"/> 
+    </ems:restriction> 
+  </ems:simpleType>
+</ems:schema>
