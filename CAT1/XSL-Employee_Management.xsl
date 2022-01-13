@@ -2,13 +2,26 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
    <xsl:template match="/">
       <html>
-         <head />
+         <head>
+	         <style>
+		        table {
+		            border-collapse: collapse;
+		            width: 100%;
+		        }
+		          
+		        th, td {
+		            text-align: left;
+		            padding: 8px;
+		        }
+		      
+		    </style>
+	    </head>
          <body>
             <h1 style="text-align:center">
                <u>Employee Management System</u>
             </h1>
             <table border="1" align="center" bgcolor="lightyellow">
-               <tr>
+               <tr bgcolor="lightblue">
                   <th>ID</th>
                   <th>NAME</th>
                   <th>AGE</th>
