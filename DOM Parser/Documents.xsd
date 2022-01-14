@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pms:schema xmlns:pms="http://www.w3.org/2001/XMLSchema">
+   <pms:element name="PMS" type="Support" />
+   <pms:complexType name="Support">
+      <pms:sequence>
+         <pms:element name="Documents" type="Doc1" minOccurs="1" maxOccurs="unbounded" />
+      </pms:sequence>
+   </pms:complexType>
+   
+   <pms:complexType name="Doc1">
+      <pms:sequence>
+         <pms:element name="Team_ID" type="pms:string" />
+         <pms:element name="Title" type="pms:string" />
+         <pms:element name="Date" type="pms:date" />
+         <pms:element name="Author" type="pms:string" />
+         <pms:element name="Pages" type="pms:integer" />
+      </pms:sequence>
+      <pms:attribute name="Doc_no" type="pms:ID" use="required" />
+   </pms:complexType>
+   <pms:simpleType name="set_value">
+      <pms:restriction base="pms:integer">
+         <pms:minInclusive value="0" />
+         <pms:maxInclusive value="4" />
+      </pms:restriction>
+   </pms:simpleType>
+   <pms:simpleType name="set_status">
+      <pms:restriction base="pms:string">
+         <pms:enumeration value="In Progress" />
+         <pms:enumeration value="On Hold" />
+         <pms:enumeration value="Resolved" />
+         <pms:enumeration value="Cancled" />
+      </pms:restriction>
+   </pms:simpleType>
+   <pms:simpleType name="set_loc">
+      <pms:restriction base="pms:string">
+         <pms:enumeration value="Offsite" />
+         <pms:enumeration value="Onsite" />
+      </pms:restriction>
+   </pms:simpleType>
+   
+</pms:schema>
