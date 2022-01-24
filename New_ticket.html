@@ -3,8 +3,7 @@
 <head>
     <title>PMS- Project Management System</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -72,12 +71,11 @@
                 margin-right: 30px;
             }
 
-            #ph_no{
+            #lbpass{
                 width: 30%;
-                position: absolute;
-                left: 35%;
+                margin-left: 75%;
                 text-align: right;
-                margin-right: 30px;
+                margin-right: 10%;
                 color: red;
                 font-style: italic;
             }
@@ -152,13 +150,15 @@
        else if(!regpass.test(password.value))
         {
             alert("INVALID Password");
+            password.style.border="solid 3px red";
+            document.getElementById("lbpass").style.visibility="visible";
             return false;
         }
             
        
-       var number=document.getElementById("phone");
-
+        var number=document.getElementById("phone");
         const regnum=/^[0-9]{10}$/;
+
         if(regnum.test(number.value))
             {
                 return true;  
@@ -169,6 +169,10 @@
                 return false;
             }   
 
+        var email=document.getElementById('email');
+        const regemail=/^([a-zA-Z0-9\.-]+) ([a-zA-Z]+)\/([a-zA-Z]+)\.in$/;
+        
+        
     }
 
 </script>
@@ -180,14 +184,22 @@
     <form onsubmit="return validate()" action="Home.html">
         <label for="name">Name</label>
         <input id="name" onkeypress="return invalid_name(event)" placeholder="Enter Name" type="text"/><br>
-        <label id="lbuser" style="color: red; visibility: hidden;">Invalid User</label><br>
+        <label id="lbuser" style="color: red; visibility: hidden;">Invalid User</label>
+        <br>
+
         <label id="password">PassWord</label>
         <input id="pass" placeholder="Enter PassWord" type="password"/><br>
-        <span id="span1"></span><br>
+        <label id="lbpass" style="color: red; visibility: hidden;">PassWord should contain minimum of 1 lower case letter [a-z],
+            1 upper case letter [A-Z] ,1 numeric character [0-9] and 1 special character: ~`!@#$%^&*()-_+={}[]|\;:"<>,./?
+            These character must be EMBEDDED somewhere in the middle lowercase letters.</label>
+        <br>
 
         <label for="phone">Phone-Number</label>
-        <input id="phone" onkeypress="return invalid_phone(event)"
-        placeholder="Enter Phone-Number" type="number"/><br>
+        <input id="phone" onkeypress="return invalid_phone(event)" placeholder="Enter Phone-Number" type="number"/>
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter Email-id">
 
         <br><br>
         <div class="center"><button type="submit">Submit</button></div>
