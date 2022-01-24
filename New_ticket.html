@@ -172,7 +172,16 @@
         var email=document.getElementById('email');
         const regemail=/^([a-zA-Z0-9\.-]+) ([a-zA-Z]+)\/([a-zA-Z]+)\.in$/;
         
-        
+        if(regemail.test(email.value))
+            {
+                return true;  
+            }
+        else
+            {
+                alert("Invalid Email ID");
+                return false;
+            } 
+
     }
 
 </script>
