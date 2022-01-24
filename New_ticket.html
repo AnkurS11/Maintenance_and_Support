@@ -130,6 +130,7 @@
     {
        var username=document.getElementById("name");
        var password=document.getElementById("pass");
+       const regpass=/^([a-z]+)([a-zA-Z0-9]+)+([a-zA-Z0-9~`!@#\$%\^&\*\(\)-_\+={}\[\]|\;:"<>,.\/?]+)([a-z]+)$/;
 
        if(username.value.trim()=="")
        {
@@ -143,31 +144,33 @@
            alert("Blank Password");
            return false;
        }
-       else if(password.value.trim().length<5)
+       else if(password.value.trim().length<8)
        {
            alert("Password is too short");
            return false;
        }
+       else if(!regpass.test(password.value))
+        {
+            alert("INVALID Password");
+            return false;
+        }
+            
        
-    }
+       var number=document.getElementById("phone");
 
-    function ph_reg()
-       {
-        var number=document.getElementById("phone");
-        var span=document.getElementById("ph_no");
-
-        const regnum=/^[0-9]{9}$/;
+        const regnum=/^[0-9]{10}$/;
         if(regnum.test(number.value))
             {
-                span.innerText="Your Number is Valid";
-                span.style.color="lime";  
+                return true;  
             }
         else
             {
-                span.innerText="Invalid Phone Number";
-                span.style.color="red";
+                alert("Invalid Phone Number");
+                return false;
             }   
-        }
+
+    }
+
 </script>
 
 <div>
@@ -179,11 +182,13 @@
         <input id="name" onkeypress="return invalid_name(event)" placeholder="Enter Name" type="text"/><br>
         <label id="lbuser" style="color: red; visibility: hidden;">Invalid User</label><br>
         <label id="password">PassWord</label>
-        <input id="pass" placeholder="Enter PassWord" type="password"/><br><br>
+        <input id="pass" placeholder="Enter PassWord" type="password"/><br>
+        <span id="span1"></span><br>
+
         <label for="phone">Phone-Number</label>
-        <input id="phone" onkeypress="return invalid_phone(event)" onkeydown="return ph_reg()" 
+        <input id="phone" onkeypress="return invalid_phone(event)"
         placeholder="Enter Phone-Number" type="number"/><br>
-        <span id="ph_no"></span>
+
         <br><br>
         <div class="center"><button type="submit">Submit</button></div>
     </form>
