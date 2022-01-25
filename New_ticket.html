@@ -71,7 +71,7 @@
                 margin-right: 30px;
             }
 
-            #lbpass{
+            #lbpass, #lbemail, #lbpri{
                 width: 30%;
                 margin-left: 75%;
                 text-align: right;
@@ -130,6 +130,11 @@
        var password=document.getElementById("pass");
        const regpass=/^([a-z]+)([a-zA-Z0-9]+)+([a-zA-Z0-9~`!@#\$%\^&\*\(\)-_\+={}\[\]|\;:"<>,.\/?]+)([a-z]+)$/;
 
+       var email=document.getElementById('email');
+       const regemail=/([a-zA-Z0-9\.-]+)@([a-zA-Z]{0,4})\.christuniversity.in$/;
+        
+       var priority=document.getElementById("pri");
+
        if(username.value.trim()=="")
        {
            alert("Blank Username");
@@ -154,6 +159,20 @@
             document.getElementById("lbpass").style.visibility="visible";
             return false;
         }
+        else if(!regemail.test(email.value))
+        {
+            alert("Invalid Email ID");
+            email.style.border="solid 3px red";
+            document.getElementById("lbemail").style.visibility="visible";
+            return false;            
+        }
+        else if(priority.value<0 || priority.value>4)
+        {
+            alert("Invalid Priority");
+            priority.style.border="solid 3px red";
+            document.getElementById("lbpri").style.visibility="visible";
+            return false;
+        }
             
        
         var number=document.getElementById("phone");
@@ -168,20 +187,7 @@
                 alert("Invalid Phone Number");
                 return false;
             }   
-
-        var email=document.getElementById('email');
-        const regemail=/^([a-zA-Z0-9\.-]+) ([a-zA-Z]+)\/([a-zA-Z]+)\.in$/;
-        
-        if(regemail.test(email.value))
-            {
-                return true;  
-            }
-        else
-            {
-                alert("Invalid Email ID");
-                return false;
-            } 
-
+  
     }
 
 </script>
@@ -208,9 +214,19 @@
         <br><br>
 
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter Email-id">
-
+        <input type="email" id="email" placeholder="Enter Email-id"/>
+        <label id="lbemail" style="color: red; visibility: hidden;">Email format = username@branch.christuniversity.in</label>
         <br><br>
+
+        <label for="priority">Priority</label>
+        <input type="number" id="pri" placeholder="Enter the priority"/>
+        <label id="lbpri" style="color: red; visibility: hidden;">Priority should be between 0 and 4</label>
+        <br><br>
+
+        <label for="issue">Issue</label>
+        <input id="issue" onkeypress="return invalid_name(event)" placeholder="Enter Issue" type="text"/><br>
+        <br><br>
+
         <div class="center"><button type="submit">Submit</button></div>
     </form>
 </div>
