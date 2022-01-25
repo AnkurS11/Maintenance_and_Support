@@ -53,7 +53,7 @@
         }
         
             .center {
-                margin-right: 200px;
+                margin-right: 120px;
                 justify-content: center;
             }
 
@@ -67,8 +67,14 @@
                 width: 30%;
                 position: absolute;
                 left: 35%;
-                text-align: right;
+                text-align: left;
                 margin-right: 30px;
+            }
+
+            input
+            {
+                border-radius:10px;
+                box-shadow: 1px 1px 2px  #333333;
             }
 
             #lbpass, #lbemail, #lbpri{
@@ -79,6 +85,22 @@
                 color: red;
                 font-style: italic;
             }
+
+            .form
+            {
+                border-radius:10px;
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 2%;
+                color: #3E4A49;
+                background-color: #bac0e5;
+                padding: 20px;
+                border: 2px solid #4899BE;
+                font-family: "Trebuchet MS", Arial, Helvetica, Sans-serif;
+                font-size: 0.9em;
+                box-shadow: 1px 1px 2px  #333333;
+            }
+
     </style>
 
 <body style="background-color: #e7ebfd;">
@@ -179,8 +201,7 @@
             document.getElementById("lbpri").style.visibility="visible";
             return false;
         }
-            
-       
+
         var number=document.getElementById("phone");
         const regnum=/^[0-9]{10}$/;
 
@@ -198,10 +219,9 @@
 
 </script>
 
-<div>
+<div class="form">
     <h1><u>Create Ticket</u></h1>
     <br>
-
     <form onsubmit="return validate()" action="Home.html">
         <label for="name">Name</label>
         <input id="name" onkeypress="return invalid_name(event)" placeholder="Enter Name" type="text"/><br>
