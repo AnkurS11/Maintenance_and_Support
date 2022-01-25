@@ -134,6 +134,7 @@
        const regemail=/([a-zA-Z0-9\.-]+)@([a-zA-Z]{0,4})\.christuniversity.in$/;
         
        var priority=document.getElementById("pri");
+       var issue=document.getElementById("issue");
 
        if(username.value.trim()=="")
        {
@@ -145,6 +146,11 @@
        else if(password.value.trim()=="")
        {
            alert("Blank Password");
+           return false;
+       }
+       else if(issue.value.trim()=="")
+       {
+           alert("Issue can't be Blank");
            return false;
        }
        else if(password.value.trim().length<8)
