@@ -234,16 +234,6 @@
         document.getElementById("form").style.backgroundColor=value;
         document.cookie="color="+value+";expires=Mon,11 April 2022 06:30:15 UTC;";
     }
-    
-    window.onload=function()
-    {
-        if(document.cookie.length!=0)
-        {
-            var a=document.cookie.split("=");
-            console.log(a);
-            document.getElementById("form").style.backgroundcolor=a[1];
-        }
-    }
 
     function set_img()
     {
@@ -258,8 +248,10 @@
         if(document.cookie.length!=0)
         {
             var i=document.cookie.split("=");
-            console.log(i);
-            document.getElementById("img").style.backgroundcolor=i[1];
+            color=(i[1].split(";"))[0];
+            console.log(color);
+            document.getElementById("form").style.backgroundColor=color;
+            document.getElementById("img").src=i[2];
         }
     }
 
@@ -310,7 +302,9 @@
         <div class="center"><button type="submit">Submit</button></div>
     </form>
 </div>
-
+<div class="align_btn">
+    <input type="button" value="Remove cookies" onclick="rem_cookies()"/>
+</div>
 </section>
 
 </body>
