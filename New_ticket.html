@@ -100,6 +100,17 @@
                 box-shadow: 1px 1px 2px  #333333;
             }
 
+            .align_img
+            {
+                margin-left: 15%;
+                margin-right: 25%;
+                justify-content: center;
+            }
+
+            .align_btn
+            {
+                text-align: right;
+            }
     </style>
 
 <body style="background-color: #e7ebfd;">
@@ -216,31 +227,55 @@
   
     }
 
-    function set_background()
+    function set_color()
     {
         var value="#bac0e5";
+
         document.getElementById("form").style.backgroundColor=value;
         document.cookie="color="+value+";expires=Mon,11 April 2022 06:30:15 UTC;";
+    }
+    
+    window.onload=function()
+    {
+        if(document.cookie.length!=0)
+        {
+            var a=document.cookie.split("=");
+            console.log(a);
+            document.getElementById("form").style.backgroundcolor=a[1];
+        }
+    }
 
+    function set_img()
+    {
         var path="services2.jpg";
-        document.getElementById("form").style.backgroundImage=path;
+
+        document.getElementById("img").src=path;
         document.cookie="img="+path+";expires=Mon,11 April 2022 06:30:15 UTC;";
     }
-        window.onload=function()
+    
+    window.onload=function()
+    {
+        if(document.cookie.length!=0)
         {
-            if(document.cookie.length!=0)
-            {
-                var a=document.cookie.split("=");
-                document.getElementById("form").style.backgroundcolor=a[1];
-            }
+            var i=document.cookie.split("=");
+            console.log(i);
+            document.getElementById("img").style.backgroundcolor=i[1];
         }
+    }
 
 </script>
 
 <div id="form">
     <h1><u>Create Ticket</u></h1>
-    <br>
-    <input type="button" value="Set Background" onclick="set_background()"/>
+
+    <div class="align_img">
+    <img id="img" width="500px">
+    </div>
+    <div class="align_btn">
+    <input type="button" value="Set Color" onclick="set_color()"/><br><br>
+    <input type="button" value="Set Image" onclick="set_img()"/>
+    </div><br>
+
     <form onsubmit="return validate()" action="Home.html">
         <label for="name">Name</label>
         <input id="name" onkeypress="return invalid_name(event)" placeholder="Enter Name" type="text"/><br>
