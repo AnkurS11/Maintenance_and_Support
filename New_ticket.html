@@ -86,14 +86,13 @@
                 font-style: italic;
             }
 
-            .form
+            #form
             {
                 border-radius:10px;
                 margin-left: 20%;
                 margin-right: 20%;
                 margin-top: 2%;
                 color: #3E4A49;
-                background-color: #bac0e5;
                 padding: 20px;
                 border: 2px solid #4899BE;
                 font-family: "Trebuchet MS", Arial, Helvetica, Sans-serif;
@@ -217,11 +216,31 @@
   
     }
 
+    function set_background()
+    {
+        var value="#bac0e5";
+        document.getElementById("form").style.backgroundColor=value;
+        document.cookie="color="+value+";expires=Mon,11 April 2022 06:30:15 UTC;";
+
+        var path="services2.jpg";
+        document.getElementById("form").style.backgroundImage=path;
+        document.cookie="img="+path+";expires=Mon,11 April 2022 06:30:15 UTC;";
+    }
+        window.onload=function()
+        {
+            if(document.cookie.length!=0)
+            {
+                var a=document.cookie.split("=");
+                document.getElementById("form").style.backgroundcolor=a[1];
+            }
+        }
+
 </script>
 
-<div class="form">
+<div id="form">
     <h1><u>Create Ticket</u></h1>
     <br>
+    <input type="button" value="Set Background" onclick="set_background()"/>
     <form onsubmit="return validate()" action="Home.html">
         <label for="name">Name</label>
         <input id="name" onkeypress="return invalid_name(event)" placeholder="Enter Name" type="text"/><br>
