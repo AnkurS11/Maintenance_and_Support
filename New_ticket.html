@@ -233,6 +233,7 @@
 
         document.getElementById("form").style.backgroundColor=value;
         document.cookie="color="+value+";expires=Mon,11 April 2022 06:30:15 UTC;";
+        console.log(document.cookie);
     }
 
     function set_img()
@@ -241,6 +242,7 @@
 
         document.getElementById("img").src=path;
         document.cookie="img="+path+";expires=Mon,11 April 2022 06:30:15 UTC;";
+        console.log(document.cookie);
     }
     
     window.onload=function()
@@ -249,9 +251,19 @@
         {
             var i=document.cookie.split("=");
             color=(i[1].split(";"))[0];
-            console.log(color);
             document.getElementById("form").style.backgroundColor=color;
             document.getElementById("img").src=i[2];
+        }
+    }
+
+    function rem_cookies()
+    {
+        var res = document.cookie;
+        var multiple = res.split(";");
+        for(var i = 0; i < multiple.length; i++) 
+        {
+            var key = multiple[i].split("=");
+            document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
         }
     }
 
