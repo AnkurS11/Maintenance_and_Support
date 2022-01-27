@@ -267,6 +267,14 @@
         }
     }
 
+    function setCookies()
+       {
+           username=document.getElementById("name").value;
+           document.cookie="username="+username;
+           email=document.getElementById("email").value;
+           document.cookie="email="+email;
+       }
+
 </script>
 
 <div id="form">
@@ -311,7 +319,7 @@
         <input id="issue" onkeypress="return invalid_name(event)" placeholder="Enter Issue" type="text"/><br>
         <br><br>
 
-        <div class="center"><button type="submit">Submit</button></div>
+        <div class="center"><button type="submit" onclick="setCookies()">Submit</button></div>
     </form>
 </div>
 <div class="align_btn">
