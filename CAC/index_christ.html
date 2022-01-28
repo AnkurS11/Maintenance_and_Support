@@ -17,6 +17,12 @@
                 text-align: left;
             }
 
+		#name,#address,#email,#password{
+			position: absolute;
+            right: 40%;
+            text-align: left;
+		}
+		
          input {
                 border-radius: 10px;
             }
@@ -49,22 +55,22 @@
 <div class="all">
 <div class="row mt-3">
 	<div class="col-1"></div>
-	<div class="col-3 align-img" >
-		<img src="logo.jpg" height="100px" width="400px"></img>
-        <img src="help.jpg" height="100px" width="200px" style="margin-left:450px;"></img>
+	<div class="col-3 align-img">
+		<img src="Christ.jpg" height="150px" width="600px"></img>
+		<img src="help.jpg" height="100px" width="200px" style="margin-left:450px;"></img>
 	</div>
 	<div class="col-4"></div>
 </div>
 <div class="row mt-5">
 	<h1 class="col-12" style="margin-bottom: 2%;" align="center"><b><strong>FEEDBACK FORM</strong></b></h1>
 </div>
-<form onsubmit="return validate()">
+<form>
 	<div class="row mt-5">
 		
 		<div class=" col-4"></div>
 		<div class=" col-4" align="center">
 		<label class="form-label" style="color:white" id="lbname"><b> NAME</b></label>
-		<input type="text" placeholder="Enter your Name" id="name" onkeypress="return invalid_name(event)">
+		<input type="text" placeholder="Enter your Name" id="name" onkeypress="return invalid_name(event)"/>
         <label id="erruser" style="color: red; visibility: hidden;">Invalid User</label>
 	    </div>
     <div class="col-4" align="center">
@@ -75,7 +81,7 @@
     <div class=" col-4"></div>
 	    <div class="col-4" align="center">
 		<label class="form-label" style="color:white" id="lbadd"><b> ADDRESS </b></label>
-		<input type="text" placeholder="Enter Address" id="address">
+		<input type="text" placeholder="Enter Address" id="address"/>
 		</div>
 	    <div class="col-4"></div>
 	</div>
@@ -84,7 +90,7 @@
 		<div class="col-4"></div>
 		<div class="col-4" align="center">
 		<label class="form-label" style="color:white" id="lbemail"><b> EMAIL </b></label>
-		<input type="text" placeholder="Enter Email" id="email">
+		<input type="text" placeholder="Enter Email" id="email"/>
         </div>
         <div class="col-4"></div>
     </div>
@@ -94,7 +100,7 @@
         <div class="col-4"></div>
             <div class="col-4" style="text-align: center;">
                 <label class="form-label" style="color:white;" id="lbpass"><b> PASSWORD </b></label>
-                <input type="password" placeholder="Enter Password" id="password" onkeydown="check_password()"><br/>
+                <input type="password" placeholder="Enter Password" id="password" onkeydown="check_password()"/><br/><br/>
                 <span id="messagepass"></span>
             </div>
         <div class="col-4"></div>
@@ -105,18 +111,18 @@
 		<div class="col-4">
 			<!-- student, location, campus, atmosphere, dorm rooms and sport -->
 			<fieldset>
-			<table id="checkit"  border="1%" cellpadding="5px" >
+			<table id="checkit"  border="1%" cellpadding="5px" width="110%">
 				<tr>
 					<th><label><b>What did u like the most in campus?</b></label><br></th>
 				</tr>
 				<tr>
 					<td>
-			<input type="checkbox"  value="atmosphere" >
+			<input type="checkbox"  value="atmosphere" />
 						<label>FRIENDLY ATMOSPHERE</label>
 			
 					</td>
 					<td>
-			<input type="checkbox" name="like" value="student" >
+			<input type="checkbox" name="like" value="student" />
 						<label>STUDENT</label>
 			
 		            </td>
@@ -124,23 +130,23 @@
 		        <tr>
 		            <td>
 
-			<input type="checkbox" name="like" value="location" >
+			<input type="checkbox" name="like" value="location" />
 		            	<label>LOCATION</label>
 		            </td>
 		            <td>
-		    <input type="checkbox"  name="like" value="campus" >
+		    <input type="checkbox"  name="like" value="campus" />
 		            	<label>CAMPUS</label>
 			
 		            </td>
 		           </tr>
 		            <td>
 
-			<input type="checkbox" name="like" value="rooms" >
+			<input type="checkbox" name="like" value="rooms" />
 		            	<label>DORM ROOMS</label>
 		            </td>
 		            <td>
 
-			<input type="checkbox" name="like" value="sports" >
+			<input type="checkbox" name="like" value="sports" />
 		            	<label>SPORTS</label>
 		            </td>
 				</tr>
@@ -153,7 +159,7 @@
         <div class="row mt-5" >
             <div class="col-4"></div>
             <div class="col-4">			
-                <table  border="1%" cellpadding="5px">
+                <table  border="1%" cellpadding="5px" width="110%">
 				<tr>
 					<th>
 						<label><b>How you became interested in the University?</b></label>
@@ -161,33 +167,25 @@
 				</tr>
 				<tr>
 					<td>
-						<input type="radio" id="friends" name="interest" value="friends">
+						<input type="radio" id="friends" name="interest" value="friends"/>
                         <label for="friends">Friends</label> 
                         
 					</td>
 				
 					<td>
-						<input type="radio" id="interest" name="interest" value="telivision">
-  <label for="telivision">Telivision</label><br>
+						<input type="radio" id="interest" name="interest" value="telivision"/>
+ 	 					<label for="telivision">Telivision</label><br>
 					</td>
-				</tr>
-		        
-                <tr>
-					<td></td>
-				</tr>
-
-        		<tr>
-					<td></td>
 				</tr>
 
 				<tr>
 					<td>
-					    <input type="radio" id="interest" name="interest" value="internet">
-  <label for="internet">Internet</label><br> 
+					    <input type="radio" id="interest" name="interest" value="internet"/>
+  						<label for="internet">Internet</label><br> 
 					</td>
 					<td>
-						<input type="radio" id="interest" name="interest" value="others">
-  <label for="others">Others</label>
+						<input type="radio" id="interest" name="interest" value="others"/>
+  						<label for="others">Others</label>
 					</td>
 				</tr>
 			
@@ -203,7 +201,7 @@
  	<div class="col-2"></div>
  	<div class="col-8" style="text-align: center">
  		<label ><h6 ><b>ADDITIONAL FEEDBACK </b></h6></label>
- 		<input type="textarea" id="text" name="additional" class="form-control">
+ 		<input type="textarea" id="text" name="additional" class="form-control"/>
  		<span id="messtext"></span>
  	</div>
  	<div class="col-2"></div>
@@ -214,8 +212,8 @@
 <div class="row mt-3">
 	<div class="col-4"></div>
 	<div class="col-2 align-btn">
-		<button class="btn-danger rounded" id="submit" style="width:100%;height: 100%;">SUBMIT</button>
-        <button class="btn-danger rounded" id="Reset" style="width:100%;height: 100%; margin-left:50px;">RESET</button>
+		<button class="btn-danger rounded" id="submit" style="width:70%;height: 100%;" onclick="check_success()">SUBMIT</button>
+		<input type="reset" value="Reset" style="background-color: red; color: white" />	
 	</div>
 	<div class="col-5"></div>
     

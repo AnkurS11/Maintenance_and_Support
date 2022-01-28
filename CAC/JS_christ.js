@@ -15,7 +15,6 @@ function check_password()
             {
                 error.style.color = "rgb(0, 255, 115)";
                 error.innerHTML = "Strength: Strong";
-                password.style.border="solid 5px green";
             }
         }
         else
@@ -39,12 +38,12 @@ function invalid_name(event)
        var username=document.getElementById("name");
        var email=document.getElementById("email");
        var password=document.getElementById("password");
+       var address=document.getElementById("address");
+
+       const regpass=/^([a-z]+)([A-Z]+)([0-9]+)([a-zA-Z0-9~`!@#\$%\^&\*\(\)-_\+={}\[\]|\;:"<>,.\/?]+)([a-z]+)$/;
 
        const regemail=/([a-zA-Z0-9\.-]+)@([a-zA-Z]{0,4})\.christuniversity.in$/;
-        
-       var priority=document.getElementById("pri");
-       var issue=document.getElementById("issue");
-
+ 
        if(username.value.trim()=="")
        {
            alert("Blank Username");
@@ -69,6 +68,17 @@ function invalid_name(event)
            return false;
        }
 
+       if(!regpass.test(password.value))
+        {
+            alert("INVALID Password");
+            password.style.border="solid 3px red";
+            document.getElementById("lbpass").style.visibility="visible";
+            return false;
+        }
+        else{
+            password.style.border="solid 5px green";
+        }
+
         if(!regemail.test(email.value))
         {
             alert("Invalid Email ID");
@@ -79,26 +89,23 @@ function invalid_name(event)
         else{
             email.style.border="solid 5px green";
         }
-        
-        if(priority.value<0 || priority.value>4)
-        {
-            alert("Invalid Priority");
-            priority.style.border="solid 3px red";
-            document.getElementById("lbpri").style.visibility="visible";
-            return false;
-        }
 
-        var number=document.getElementById("phone");
-        const regnum=/^[0-9]{10}$/;
-
-        if(regnum.test(number.value))
-            {
-                return true;  
-            }
-        else
-            {
-                alert("Invalid Phone Number");
-                return false;
-            }   
-  
+        if(address.value.trim()=="")
+       {
+           alert("Blank Address");
+           address.style.border="solid 3px red";
+           return false;
+       }
+       else{
+            address.style.border="solid 5px green";
+       }
     }
+
+function check_success()
+{
+    flag = validate();
+    if(flag != false)
+    {
+        alert("Form submitted successfully");
+    }
+}
