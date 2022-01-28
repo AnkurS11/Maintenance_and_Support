@@ -9,7 +9,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
   rel="stylesheet"/>
 <style>
-        #lbuser,#lbname,#lbadd,#lbemail,#lbpass 
+        #lbname,#lbadd,#lbemail,#lbpass 
             {
                 width: 30%;
                 position: absolute;
@@ -18,8 +18,7 @@
             }
 
          input {
-                border-radius:10px;
-                box-shadow: 1px 1px 2px  #333333;
+                border-radius: 10px;
             }
 
         .align-img{
@@ -50,23 +49,15 @@
 </div>
 <div class="row mt-5">
 	<h1 class="col-12" style="margin-bottom: 2%;" align="center"><b><strong>FEEDBACK FORM</strong></b></h1>
-	<div class=" col-4"></div>
-		<div class=" col-4" align="center">
-		<label class="form-label" style="color:white" id="lbuser"><b> USER NAME</b></label>
-		<input type="text" placeholder="Enter Username" id="user">
-		<span id="messageuser"></span>
-	    </div>
-	    <div class="col-4" align="center">
-		</div>
-	    
 </div>
+<form onsubmit="return validate()">
 	<div class="row mt-5">
 		
 		<div class=" col-4"></div>
 		<div class=" col-4" align="center">
 		<label class="form-label" style="color:white" id="lbname"><b> NAME</b></label>
-		<input type="text" placeholder="Enter your Name" id="name">
-		<span id="messagename"></span>
+		<input type="text" placeholder="Enter your Name" id="name" onkeypress="return invalid_name(event)">
+        <label id="erruser" style="color: red; visibility: hidden;">Invalid User</label>
 	    </div>
     <div class="col-4" align="center">
     </div>
@@ -223,6 +214,6 @@
 	<div class="col-5"></div>
     
 </div>
-
+</form>
 </body>
 </html>
