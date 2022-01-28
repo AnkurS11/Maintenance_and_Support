@@ -98,4 +98,6 @@ function invalid_name(event)
        else{
             address.style.border="solid 5px green";
        }
+
+       alert("Form Submitted Successfully");
     }
