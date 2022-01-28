@@ -64,7 +64,7 @@
 <div class="row mt-5">
 	<h1 class="col-12" style="margin-bottom: 2%;" align="center"><b><strong>FEEDBACK FORM</strong></b></h1>
 </div>
-<form>
+<form onsubmit="return validate()" action="#">
 	<div class="row mt-5">
 		
 		<div class=" col-4"></div>
@@ -213,6 +213,7 @@
 	<div class="col-4"></div>
 	<div class="col-2 align-btn">
 		<button class="btn-danger rounded" id="submit" style="width:70%;height: 100%;" onclick="check_success()">SUBMIT</button>
+		<br/>
 		<input type="reset" value="Reset" style="background-color: red; color: white" />	
 	</div>
 	<div class="col-5"></div>

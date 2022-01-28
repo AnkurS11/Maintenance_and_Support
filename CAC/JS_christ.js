@@ -70,9 +70,8 @@ function invalid_name(event)
 
        if(!regpass.test(password.value))
         {
-            alert("INVALID Password");
+            alert("INVALID Password- PassWord should contain minimum of 1 lower case letter [a-z], 1 upper case letter [A-Z] ,1 numeric character [0-9] and 1 special character: ~`!@#$%^&*()-_+={}[]|:<>,./?These character must be EMBEDDED somewhere in the middle lowercase letters");
             password.style.border="solid 3px red";
-            document.getElementById("lbpass").style.visibility="visible";
             return false;
         }
         else{
@@ -100,12 +99,3 @@ function invalid_name(event)
             address.style.border="solid 5px green";
        }
     }
-
-function check_success()
-{
-    flag = validate();
-    if(flag != false)
-    {
-        alert("Form submitted successfully");
-    }
-}
