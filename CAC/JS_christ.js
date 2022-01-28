@@ -1,3 +1,30 @@
+function check_password()
+{
+    var password=document.getElementById("password");
+    var error = document.getElementById("messagepass");
+        if(/^(.){8,20}$/.test(password.value.trim()))
+        {
+            error.style.color = "red";
+            error.innerHTML = "Strength: Weak";
+            if((password.value.trim().match(/[A-Z]/)) && (password.value.trim().match(/[a-z]/)))
+            {
+                error.style.color = "yellow";
+                error.innerHTML = "Strength: Medium";
+            }
+            if((password.value.trim().match(/[0-9]/)) && (password.value.trim().match(/[\W]/)))
+            {
+                error.style.color = "rgb(0, 255, 115)";
+                error.innerHTML = "Strength: Strong";
+                password.style.border="solid 5px green";
+            }
+        }
+        else
+        {
+            error.style.color = "red";
+            error.innerHTML = "Invalid Password";
+        }
+}
+
 function invalid_name(event)
     {
         let code=event.which;
@@ -10,10 +37,9 @@ function invalid_name(event)
     function validate()
     {
        var username=document.getElementById("name");
-       var password=document.getElementById("pass");
-       const regpass=/^([a-z]+)([a-zA-Z0-9]+)+([a-zA-Z0-9~`!@#\$%\^&\*\(\)-_\+={}\[\]|\;:"<>,.\/?]+)([a-z]+)$/;
+       var email=document.getElementById("email");
+       var password=document.getElementById("password");
 
-       var email=document.getElementById('email');
        const regemail=/([a-zA-Z0-9\.-]+)@([a-zA-Z]{0,4})\.christuniversity.in$/;
         
        var priority=document.getElementById("pri");
@@ -29,37 +55,32 @@ function invalid_name(event)
        else{
             username.style.border="solid 5px green";
        }
-
+      
        if(password.value.trim()=="")
        {
            alert("Blank Password");
-           return false;
-       }
-       else if(issue.value.trim()=="")
-       {
-           alert("Issue can't be Blank");
+           password.style.border="solid 3px red";
            return false;
        }
        else if(password.value.trim().length<8)
        {
            alert("Password is too short");
+           password.style.border="solid 3px red";
            return false;
        }
-       else if(!regpass.test(password.value))
-        {
-            alert("INVALID Password");
-            password.style.border="solid 3px red";
-            document.getElementById("lbpass").style.visibility="visible";
-            return false;
-        }
-        else if(!regemail.test(email.value))
+
+        if(!regemail.test(email.value))
         {
             alert("Invalid Email ID");
             email.style.border="solid 3px red";
             document.getElementById("lbemail").style.visibility="visible";
             return false;            
         }
-        else if(priority.value<0 || priority.value>4)
+        else{
+            email.style.border="solid 5px green";
+        }
+        
+        if(priority.value<0 || priority.value>4)
         {
             alert("Invalid Priority");
             priority.style.border="solid 3px red";

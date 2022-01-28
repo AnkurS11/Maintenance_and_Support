@@ -33,6 +33,14 @@
             margin-left: 10%;
             margin-bottom: 10px;
         }
+        #messagepass{
+                width: 30%;
+                margin-right: 75%;
+                text-align: right;
+                margin-right: 10%;
+                color: red;
+                font-style: italic;
+            }
 </style>
 	<title>WD-CAC1</title>
 </head>
@@ -68,7 +76,6 @@
 	    <div class="col-4" align="center">
 		<label class="form-label" style="color:white" id="lbadd"><b> ADDRESS </b></label>
 		<input type="text" placeholder="Enter Address" id="address">
-		<span id="messageadd"></span>
 		</div>
 	    <div class="col-4"></div>
 	</div>
@@ -78,7 +85,6 @@
 		<div class="col-4" align="center">
 		<label class="form-label" style="color:white" id="lbemail"><b> EMAIL </b></label>
 		<input type="text" placeholder="Enter Email" id="email">
-        <span id="messageemail"></span>
         </div>
         <div class="col-4"></div>
     </div>
@@ -86,11 +92,11 @@
     <div class="row mt-5">
 	
         <div class="col-4"></div>
-        <div class="col-4" style="text-align: center;">
-            <label class="form-label" style="color:white;" id="lbpass"><b> PASSWORD </b></label>
-            <input type="text" placeholder="Enter Password" id="password">
-            <span id="messpass"></span>
-        </div>
+            <div class="col-4" style="text-align: center;">
+                <label class="form-label" style="color:white;" id="lbpass"><b> PASSWORD </b></label>
+                <input type="password" placeholder="Enter Password" id="password" onkeydown="check_password()"><br/>
+                <span id="messagepass"></span>
+            </div>
         <div class="col-4"></div>
 	</div>
 
