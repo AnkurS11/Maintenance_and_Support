@@ -4,10 +4,7 @@ angular.module('Ticket',['ngRoute'])
     $routeProvider.when('/Home',
     {
         templateUrl:'SiglePage_Home.html',
-        controller:'homectrl'}).when('/Home/:first/:last',
-        {
-            templateUrl:'./Home.html',
-            controller:'homectrl'
+        controller:'homectrl'
     }).when('/Reports',
     {
         templateUrl:'Reports.html',
