@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Ticket">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,10 +36,6 @@
 
             <h2 style="text-align: center;"><u>Reference Documents</u></h2>
 
-                <div>
-                    No. of Rows to be displayed: <input type="number" step="1" min="0"
-                    max="8" ng-model="rowlimit"/>
-                </div><br><br>
             </div>        
                 <table id="Tickets">
                     <tr>
@@ -53,17 +49,14 @@
                         <input type="text" ng-model="search.Time"></th>               
                         <th>Status<br>
                         <input type="text" ng-model="search.Status"></th>               
-                        <th>Cost(in Dollar)<br>
-                        <input type="text" ng-model="search.Cost"></th>        
                     </tr>        
                             
-                    <tr ng-repeat="item in ticket_details | orderBy:'Assigned_to' | filter: search | limitTo: rowlimit" >
-                        <td>{{item.Priority}}</td>
-                        <td>{{item.Assigned_to | uppercase }}</td>
-                        <td>{{item.Date | date: "dd/MM/yyyy"}}</td>
-                        <td>{{item.Time}}</td>
-                        <td>{{item.Status | lowercase }}</td>
-                        <td>{{item.Cost | currency }}</td>
+                    <tr ng-repeat="item in ticket_details | orderBy:'Assigned_to' | filter: search" >
+                        <td> {{item.Priority}} </td>
+                        <td> {{item.Assigned_to}} </td>
+                        <td> {{item.Date}} </td>
+                        <td> {{item.Time}} </td>
+                        <td> {{item.Status}} </td>
                     </tr>
                 </table>
             </div>

@@ -30,20 +30,11 @@ angular.module('Ticket',['ngRoute'])
         };
     }
 })
-.controller("Ticket_ctrl",function($scope)
-{
-    $http.get("https://ankurs11.github.io/JSON/data.json")
-    .success(function(response)
-    {
-        $scope.ticket_details=response.records;
-    });
-    $scope.rowlimit=8;
-})
-.controller("documentsctrl",function($scope,$http)
+.controller("Ticket_ctrl",function($scope,$http)
 {
     $http.get('data.json')
     .success(function(response)
     {
-        $scope.students=response.records;
+        $scope.ticket_details=response.records;
     });
 });
