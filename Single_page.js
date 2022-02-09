@@ -1,0 +1,47 @@
+angular.module('Ticket',['ngRoute'])
+.config(function($routeProvider)
+{
+    $routeProvider.when('/Home',
+    {
+        templateUrl:'./Home.html',
+        controller:'homectrl'}).when('/Home/:first/:last',
+        {
+            templateUrl:'./Home.html',
+            controller:'homectrl'
+    }).when('./Reports',
+    {
+        templateUrl:'./Reports.html',
+        controller:'reportsctrl'
+    }).when('/Documents',
+    {
+        templateUrl:'./Documents.html',
+        controller:'documentsctrl'
+    })
+})
+.controller('myctrl',function()
+{
+
+})
+.controller("homectrl",function($scope,$routeParams)
+{
+    $scope.message="Home Page"
+    if($routeParams.first&&$routeParams.last)
+    {
+        $scope.person={
+            first:$routeParams.first,
+            last:$routeParams.last
+        };
+    }
+})
+.controller("reportsctrl",function($scope)
+{
+   $scope.courses=["MCA","MSC","MBA","BCA","BCom","BBA"]; 
+})
+.controller("documentsctrl",function($scope,$http)
+{
+    $http.get('data.json')
+    .success(function(response)
+    {
+        $scope.students=response.records;
+    });
+});
