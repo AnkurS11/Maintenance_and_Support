@@ -12,7 +12,7 @@ angular.module('Ticket',['ngRoute'])
     }).when('/Documents',
     {
         templateUrl:'SiglePage_Documents.html',
-        controller:'documentsctrl'
+        controller:'Ticket_ctrl'
     })
 })
 .controller('myctrl',function()
@@ -36,5 +36,13 @@ angular.module('Ticket',['ngRoute'])
     .success(function(response)
     {
         $scope.ticket_details=response.records;
+    });
+})
+.controller("documentsctrl",function($scope,$http)
+{
+    $http.get('data.json')
+    .success(function(response)
+    {
+        $scope.students=response.records;
     });
 });
