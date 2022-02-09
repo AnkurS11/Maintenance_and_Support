@@ -5,15 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="Single_page.js"></script>
+    <style>
+        tr:nth-child(odd) {background-color: #85a0e4;}
+        tr:nth-child(even) {background-color: #547feb;}
+
+        tr:hover{background-color: lightblue;}
+
+        table, th, td {
+                        border: 2px solid black;
+                        border-collapse: collapse;
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align:center;
+                        padding: 5px;
+                    }
+        
+        body{
+            font-family: "Roboto", sans-serif;
+            background-color:#dbdff8;
+        }
+
+    </style>
 </head>
 <body>
     <article>
     <img src="service.jpg" height="200px" width="100%" alt="Services">
-                <div class="w3-row w3-padding-64">
+            <div class="w3-row w3-padding-64">
 
-                    <h2 style="text-align: center;"><u>Reference Documents</u></h2>
+            <h2 style="text-align: center;"><u>Reference Documents</u></h2>
 
-                </div>
+                <div>
+                    No. of Rows to be displayed: <input type="number" step="1" min="0"
+                    max="8" ng-model="rowlimit"/>
+                </div><br><br>
+            </div>        
+                <table id="Tickets">
+                    <tr>
+                        <th>Priority<br>
+                        <input type="text" ng-model="search.Priority"></th>
+                        <th>Assigned_to<br>
+                        <input type="text" ng-model="search.Assigned_to"></th>                
+                        <th>Date<br>
+                        <input type="text" ng-model="search.Date"></th>               
+                        <th>Time<br>
+                        <input type="text" ng-model="search.Time"></th>               
+                        <th>Status<br>
+                        <input type="text" ng-model="search.Status"></th>               
+                        <th>Cost(in Dollar)<br>
+                        <input type="text" ng-model="search.Cost"></th>        
+                    </tr>        
+                            
+                    <tr ng-repeat="item in ticket_details | orderBy:'Assigned_to' | filter: search | limitTo: rowlimit" >
+                        <td>{{item.Priority}}</td>
+                        <td>{{item.Assigned_to | uppercase }}</td>
+                        <td>{{item.Date | date: "dd/MM/yyyy"}}</td>
+                        <td>{{item.Time}}</td>
+                        <td>{{item.Status | lowercase }}</td>
+                        <td>{{item.Cost | currency }}</td>
+                    </tr>
+                </table>
+            </div>
                 <div class="wrapper">
                        <p> <button class="button button1">Open Document</button>    
                     <button class="button button2">Last Page</button></p>

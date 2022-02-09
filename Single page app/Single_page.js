@@ -30,9 +30,14 @@ angular.module('Ticket',['ngRoute'])
         };
     }
 })
-.controller("reportsctrl",function($scope)
+.controller("Ticket_ctrl",function($scope)
 {
-   $scope.courses=["MCA","MSC","MBA","BCA","BCom","BBA"]; 
+    $http.get("https://ankurs11.github.io/JSON/data.json")
+    .success(function(response)
+    {
+        $scope.ticket_details=response.records;
+    });
+    $scope.rowlimit=8;
 })
 .controller("documentsctrl",function($scope,$http)
 {
