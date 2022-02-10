@@ -86,25 +86,27 @@
 </head>
 <body>
     <article class="article">
-        <div class="d-flex justify-content-center">
+        <div>
         <div class="wrapper">
             <h2 class="w3-text-teal" style="text-align: center;"><u>Team's Report</u></h2>
 
-            <select class="combo w3-text-teal">
-                <option value="Select">Select....</option>
-                <option value="html">Today</option>
-                <option value="css">Weekly</option>
-                <option value="css">Monthly</option>
-                <option value="css">Quaterly</option>
-            </select>
+            <div class="row">
+                <div class="col-5">
+                    <select class="combo w3-text-teal">
+                        <option value="Select">Select....</option>
+                        <option value="html">Today</option>
+                        <option value="css">Weekly</option>
+                        <option value="css">Monthly</option>
+                        <option value="css">Quaterly</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <ul>
+                        <li ng-repeat="x in ticket_data">{{x.Assigned_to}}</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        </div>
-<br>
-        <div class="d-flex justify-content-center">
-            <h1>Assigned_to</h1>
-        <ul>
-            <li ng-repeat="x in ticket_data">{{x.Assigned_to}}</li>
-        </ul>
         </div>
         <hr>
         <div class="row">
