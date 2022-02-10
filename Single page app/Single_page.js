@@ -7,7 +7,7 @@ angular.module('Ticket',['ngRoute'])
         controller:'homectrl'
     }).when('/Reports',
     {
-        templateUrl:'SiglePage_Report.html',
+        templateUrl:'SinglePage_Report.html',
         controller:'reportsctrl'
     }).when('/Documents',
     {

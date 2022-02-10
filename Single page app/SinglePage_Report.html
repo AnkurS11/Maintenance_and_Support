@@ -5,6 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style type="text/css" media="screen">
+
+        .w3-sidebar {
+            z-index: 3;
+            width: 250px;
+            top: 43px;
+            bottom: 0;
+            height: inherit;
+            }
+
+        table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                margin-left: 30%;
+                margin-right: 10%;
+                text-align:center;
+                padding: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            .combo{
+                padding:10px;
+            }
+
+            .wrapper {
+                    text-align: left;
+                }
+
+                .piechart {
+                    margin-top: 30px;
+                    display: block;
+                    position: absolute;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    background-image: conic-gradient(
+                        #788fc7 70deg, 
+                        #2f5ed6 0 235deg, 
+                        #0c39aa 0);
+                }
+        
+                .piechart {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 100px;
+                }
+                
+                @media (min-width:992px){
+                .menu{
+                    display: block;
+                }
+                }
+                @media (min-width:768px) and (max-width:991px){
+                    .menu{
+                        display: none;
+                    }
+                    .piechart{
+                        display: none;
+                    }
+                    .chart-head{
+                        display: none;
+                    }
+                    .article{
+                        width: 100%;
+                    }
+                }
+                @media (max-width:767px){
+                    .menu{
+                        display: none;
+                    }
+                    .piechart{
+                        display: none;
+                    }
+                    .chart-head{
+                        display: none;
+                    }
+                    .article{
+                        width: 100%;
+                    }
+                    #t1{
+                        margin-left: 5%;
+                    }
+                }
+        </style>
 </head>
 <body>
     <article class="article">
