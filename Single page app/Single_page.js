@@ -47,6 +47,6 @@ angular.module('Ticket',['ngRoute'])
     $http.get('data.json')
     .success(function(response)
     {
-        $scope.students=response.records;
+        $scope.ticket_data=response.records;
     });
 });
