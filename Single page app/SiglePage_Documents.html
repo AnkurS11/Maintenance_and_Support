@@ -37,6 +37,7 @@
             <h2 style="text-align: center;"><u>Reference Documents</u></h2>
 
             </div>        
+            Search table: <input type="text" ng-model="searchTicket" placeholder="Search"/><br><br>
                 <table id="Tickets">
                     <tr>
                         <th>Priority<br>
@@ -51,7 +52,7 @@
                         <input type="text" ng-model="search.Status"></th>               
                     </tr>        
                             
-                    <tr ng-repeat="item in ticket_details | orderBy:'Assigned_to' | filter: search" >
+                    <tr ng-repeat="item in ticket_details | orderBy:'Assigned_to' | filter: search | filter: searchTicket" >
                         <td> {{item.Priority}} </td>
                         <td> {{item.Assigned_to}} </td>
                         <td> {{item.Date}} </td>

@@ -7,12 +7,16 @@ angular.module('Ticket',['ngRoute'])
         controller:'homectrl'
     }).when('/Reports',
     {
-        templateUrl:'Reports.html',
+        templateUrl:'SiglePage_Report.html',
         controller:'reportsctrl'
     }).when('/Documents',
     {
         templateUrl:'SiglePage_Documents.html',
         controller:'Ticket_ctrl'
+    }).when('/Home/:First/:Last',
+    {
+        templateUrl:'SiglePage_Home.html',
+        controller:'homectrl'
     })
 })
 .controller('myctrl',function()
@@ -21,24 +25,24 @@ angular.module('Ticket',['ngRoute'])
 })
 .controller("homectrl",function($scope,$routeParams)
 {
-    $scope.message="Home Page"
-    if($routeParams.first&&$routeParams.last)
+    $scope.message="Ticket Page"
+    if($routeParams.First&&$routeParams.Last)
     {
         $scope.person={
-            first:$routeParams.first,
-            last:$routeParams.last
+            First:$routeParams.First,
+            Last:$routeParams.Last
         };
     }
 })
 .controller("Ticket_ctrl",function($scope,$http)
 {
-    $http.get('data.json')
+    $http.get('https://ankurs11.github.io/JSON/data.json')
     .success(function(response)
     {
         $scope.ticket_details=response.records;
     });
 })
-.controller("documentsctrl",function($scope,$http)
+.controller("reportsctrl",function($scope,$http)
 {
     $http.get('data.json')
     .success(function(response)
