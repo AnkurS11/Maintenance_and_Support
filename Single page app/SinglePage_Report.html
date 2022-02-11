@@ -101,9 +101,10 @@
                     </select>
                 </div>
                 <div class="col-4">
-                    <ul>
-                        <li ng-repeat="x in ticket_data">{{x.Assigned_to}}</li>
-                    </ul>
+                        <dl ng-repeat="x in ticket_data">
+                            <dt>{{x.Assigned_to}}</dt>
+                            <dd>{{x.Status}}</dd>
+                        </dl>
                 </div>
             </div>
         </div>
