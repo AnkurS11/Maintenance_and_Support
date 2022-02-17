@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="tickets">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Tickets</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <script src="JS_Display.js"></script>
+    <style>
+        tr:nth-child(odd) {background-color: #85a0e4;}
+        tr:nth-child(even) {background-color: #547feb;}
+
+        tr:hover{background-color: lightblue;}
+
+        table, th, td {
+                        border: 2px solid black;
+                        border-collapse: collapse;
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align:center;
+                        padding: 5px;
+                    }
+        
+        body{
+            font-family: "Roboto", sans-serif;
+            background-color:#dbdff8;
+        }
+
+    </style>
+</head>
+<body ng-controller="Ticket_ctrl">
+
+    <table id="Tickets">
+        <tr>
+            <th>Priority<br>
+            <input type="text"></th>
+            <th>Assigned_to<br>
+            <input type="text"></th>                
+            <th>Date<br>
+            <input type="text"></th>               
+            <th>Time<br>
+            <input type="text"></th>               
+            <th>Status<br>
+            <input type="text"></th>               
+        </tr>        
+                
+        <tr ng-repeat="item in ticket_details" >
+            <td> {{item.Priority}} </td>
+            <td> {{item.Assigned_to}} </td>
+            <td> {{item.Date}} </td>
+            <td> {{item.Time}} </td>
+            <td> {{item.Status}} </td>
+        </tr>
+
+    </table>
+</div>
+
+</body>
+</html>

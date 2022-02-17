@@ -36,7 +36,7 @@ angular.module('Ticket',['ngRoute'])
 })
 .controller("Ticket_ctrl",function($scope,$http)
 {
-    $http.get('https://ankurs11.github.io/JSON/data.json')
+    $http.get('http://127.0.0.1:7000/getjson')
     .success(function(response)
     {
         $scope.ticket_details=response.records;

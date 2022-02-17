@@ -11,12 +11,20 @@ app.use(cors({
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(port, () => console.log("The Server is running...!"))
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+})
 app.get('/getjson', (req, res) => {
     res.send(loadjson())
 })
 app.get('/add', (req, res) => {
     res.sendFile(__dirname + '/addTicket.html');
 })
+app.get('/display', (req, res) => {
+    res.sendFile(__dirname + '/Display.html');
+})
+
 app.post('/submit', (req, res) => {
     console.log(JSON.stringify(req.body))
     const fs = require("fs")

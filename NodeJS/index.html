@@ -13,10 +13,42 @@
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../external_css.css">
 
     <style>
+        html,body,h1,h2 {font-family: "Roboto", sans-serif;}
 
+        nav {
+            float: left;
+            width: 15%;
+            height: 150vh;
+            padding: 30px;
+            background-color: #93A1EC;
+            opacity: 0.8;
+        }
+
+        header {
+            background-color: #0E0661;
+            padding: 1px;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            }
+        article {
+            float: left;
+            padding: 20px;
+            width: 85%;
+            height: 100%;
+            }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+            }
+
+        a:hover{
+            text-decoration: underline;
+        }
         .w3-sidebar {
         z-index: 3;
         width: 250px;
@@ -118,8 +150,9 @@
     <nav class="w3-bar-block w3-collapse w3-large w3-animate-left" id="mySidebar">
         <br><br>
         <h4 class="w3-bar-item"><b>Menu</b></h4>
-        <a class="w3-bar-item w3-button w3-hover-black" href="#/tickets">Tickets</a>
-        <a class="w3-bar-item w3-button w3-hover-black" href="#/NewTicket">New Ticket</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="/getjson">Get JSON file</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="/add">New Tickets</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="/display">Display Table</a>
     </nav>
 </div>
 
