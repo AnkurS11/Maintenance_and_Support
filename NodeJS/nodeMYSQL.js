@@ -23,7 +23,7 @@ connection.connect((err)=>
         console.log('Error!')
 });
 
-app.listen(3306,()=>{
+app.listen(5900,()=>{
     console.log('Server Started!!')
 });
 
@@ -46,7 +46,7 @@ app.get('/ticket/:id',(req,res)=>{
 })
 
 app.get('/add',(req,res)=>{
-    var post = {Priority:3,Assigned_to:"Sameer",Date:"2022-01-22",Time:"09:00:10",Status:"Hold"};
+    var post = {Ticket_no:19,Priority:3,Date_of_creation:"2022-01-22",Assigned_to:"Sameer",Status:"Hold"};
     var sql = 'INSERT INTO tickets SET ?';
     var query = connection.query(sql,post,(err,result)=>{
         if(err) throw err;
