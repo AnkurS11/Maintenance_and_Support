@@ -23,7 +23,7 @@ connection.connect((err)=>
         console.log('Error!')
 });
 
-app.listen(5700,()=>{
+app.listen(3306,()=>{
     console.log('Server Started!!')
 });
 
