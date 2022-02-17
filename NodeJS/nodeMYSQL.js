@@ -46,7 +46,7 @@ app.get('/ticket/:id',(req,res)=>{
 })
 
 app.get('/add',(req,res)=>{
-    var post = {Ticket_no:19,Priority:3,Date_of_creation:"2022-01-22",Assigned_to:"Sameer",Status:"Hold"};
+    var post = {Ticket_no:15,Priority:3,Date_of_creation:"2022-01-22",Assigned_to:"Sameer",Status:"Hold"};
     var sql = 'INSERT INTO tickets SET ?';
     var query = connection.query(sql,post,(err,result)=>{
         if(err) throw err;
@@ -58,7 +58,7 @@ app.get('/update/:id',(req,res)=>{
     var name = 'Ankur Sharma';
     
     var sql = `UPDATE tickets SET Assigned_to ='${name}' WHERE ticket_no = '${req.params.id}'`;
-    var query = connection.query(sql,post,(err,result)=>{
+    var query = connection.query(sql,(err,result)=>{
         if(err) throw err;
         res.send('Rows Updated!')
     })
@@ -66,8 +66,8 @@ app.get('/update/:id',(req,res)=>{
 
 app.get('/delete/:id',(req,res)=>{
     
-    var sql = `DELETE tickets WHERE ticket_no = '${req.params.id}'`;
-    var query = connection.query(sql,post,(err,result)=>{
+    var sql = `DELETE from tickets WHERE ticket_no = '${req.params.id}'`;
+    var query = connection.query(sql,(err,result)=>{
         if(err) throw err;
         res.send('Rows Deleted!')
     })
