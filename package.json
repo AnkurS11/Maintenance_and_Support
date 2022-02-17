@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/AnkurS11/Maintenance_and_Support/issues"
   },
-  "homepage": "https://github.com/AnkurS11/Maintenance_and_Support#readme"
+  "homepage": "https://github.com/AnkurS11/Maintenance_and_Support#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "mysql2": "^2.3.3"
+  }
 }
